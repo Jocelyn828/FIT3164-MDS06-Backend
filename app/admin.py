@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import JSONData
+from .models import JSONData, Article
 from django.forms import widgets
 import json
 from django.db import models
@@ -16,7 +16,8 @@ class PrettyJSONWidget(widgets.Textarea):
             return value
         except Exception as e:
             return super(PrettyJSONWidget, self).format_value(value)
-        
+
+# In case I need it in the future (not used for now)  
 @admin.register(JSONData)
 class JSONDataAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'created_at')
@@ -25,4 +26,9 @@ class JSONDataAdmin(admin.ModelAdmin):
         models.JSONField: {'widget': PrettyJSONWidget}
     }
 
-
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'source', 'type', 'theme', 'created_at')
+    list_filter = ('source', 'type', 'theme', 'research_paper_type')
+    search_fields = ('title', 'source', 'theme', 'country_organisation')
+    readonly_fields = ('created_at',)
