@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('store-json/', views.store_json_from_file, name='store_json'),
+    path('api/search/', views.search_articles, name='api_search'),
 ]
