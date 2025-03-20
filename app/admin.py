@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import JSONData, Article
+from .models import JSONData, Article, EvaluationArticle
 from django.forms import widgets
 import json
 from django.db import models
@@ -32,3 +32,13 @@ class ArticleAdmin(admin.ModelAdmin):
     list_filter = ('source', 'type', 'theme', 'research_paper_type')
     search_fields = ('title', 'source', 'theme', 'country_organisation')
     readonly_fields = ('created_at',)
+
+@admin.register(EvaluationArticle)
+class EvaluationArticleAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'source', 'embedding_status', 'created_at')
+    list_filter = ('source', 'type', 'theme', 'research_paper_type', 'embedding_status')
+    search_fields = ('title', 'abstract', 'source', 'theme', 'country_organisation')
+    readonly_fields = ('created_at', 'updated_at')
+    formfield_overrides = {
+        models.JSONField: {'widget': PrettyJSONWidget}
+    }
