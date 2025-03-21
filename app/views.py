@@ -37,7 +37,7 @@ class ResearchOutput(BaseModel):
 def store_json_from_file(request):
     # Get the path to the JSON file in the project root
     file_path = os.path.join(settings.BASE_DIR, 'tableConvert.com_2yj0vs.json')
-   
+    
     try:
         # Delete all existing Article records and reset the sequence
         Article.objects.all().delete()
@@ -46,7 +46,7 @@ def store_json_from_file(request):
         # Read JSON file with UTF-8 encoding
         with open(file_path, 'r', encoding='utf-8') as json_file:
             data = json.load(json_file)
-       
+        
         # Count of articles created
         count = 0
         
@@ -77,7 +77,7 @@ def store_json_from_file(request):
                 country_organisation=article_data.get('Country/ Organisation', '')
             )
             count += 1
-       
+        
         return JsonResponse({
             'message': f'JSON file processed successfully. Created {count} articles.',
             'articles_created': count
@@ -292,9 +292,11 @@ async def search_articles_vector_async(request):
         'articles': results
     })
 
+
 def search_articles_vector(request):
     """Synchronous wrapper for the async vector search function."""
     return asyncio.run(search_articles_vector_async(request))
+
 
 def trigger_embeddings_generation(request):
     """Endpoint to trigger the embedding generation process."""
