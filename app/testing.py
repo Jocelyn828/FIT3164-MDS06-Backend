@@ -25,12 +25,11 @@ class LocalPDFAnalyzer:
         self.model = model
             
         self.exclusion_criteria = [
-            "Animal studies only, no human subjects",
-            "In vitro studies without clinical application",
-            "Conference abstracts with insufficient data",
-            "Studies focusing on pediatric populations",
-            "Non-English language publications",
-            "Case reports with sample size < 10"
+            "Not Prostate Cancer/ irrelevant/ not related to study objective",
+            "Treatment/ management/ diagnosis",
+            "Not by country health authorities or medical organisation",
+            "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
+            "Management and/or treatment"
         ]
         
         self.inclusion_criteria = [
