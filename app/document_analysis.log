@@ -1,0 +1,46 @@
+2025-03-23 18:56:47,412 - scholarly - INFO - Proxy works! IP address: 58.71.192.23
+2025-03-23 18:56:48,562 - scholarly - INFO - Proxy works! IP address: 58.71.192.23
+2025-03-23 18:56:48,601 - prostate_cancer_analysis - WARNING - Error setting up proxy: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-03-23 18:56:48,601 - prostate_cancer_analysis - INFO - Processing exclusion articles...
+2025-03-23 18:56:48,612 - scholarly - INFO - Getting https://scholar.google.com/scholar?hl=en&q=Menopause%3A%20Vasomotor%20Symptoms%2C%20Prescription%20Therapeutic%20Agents%2C%20Complementary%20and%20Alternative%20Medicine%2C%20Nutrition%2C%20and%20Lifestyle%09%09%09&as_vis=0&as_sdt=0,33
+2025-03-23 18:56:51,416 - httpx - INFO - HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=Menopause%3A%20Vasomotor%20Symptoms%2C%20Prescription%20Therapeutic%20Agents%2C%20Complementary%20and%20Alternative%20Medicine%2C%20Nutrition%2C%20and%20Lifestyle%09%09%09&as_vis=0&as_sdt=0,33 "HTTP/1.1 200 OK"
+2025-03-23 18:56:51,711 - prostate_cancer_analysis - INFO - Found publication: Guideline No. 422a: Menopause: vasomotor symptoms, prescription therapeutic agents, complementary and alternative medicine, nutrition, and lifestyle
+2025-03-23 18:56:52,141 - prostate_cancer_analysis - INFO - Successfully downloaded: https://www.sciencedirect.com/science/article/pii/S1701216321006034
+2025-03-23 18:56:52,362 - prostate_cancer_analysis - ERROR - Error extracting text from ./documents/exclusion/article_ex_0.pdf: EOF marker not found
+2025-03-23 18:56:52,363 - prostate_cancer_analysis - INFO - Processing inclusion articles...
+2025-03-23 18:56:52,363 - scholarly - INFO - Getting https://scholar.google.com/scholar?hl=en&q=Prostate-specific%20Antigen%20Testing%20as%20Part%20of%20a%20Risk-Adapted%20Early%20Detection%20Strategy%20for%20Prostate%20Cancer%3A%20European%20Association%20of%20Urology%20Position%20and%20Recommendations%20for%202021&as_vis=0&as_sdt=0,33
+2025-03-23 18:56:53,794 - httpx - INFO - HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=Prostate-specific%20Antigen%20Testing%20as%20Part%20of%20a%20Risk-Adapted%20Early%20Detection%20Strategy%20for%20Prostate%20Cancer%3A%20European%20Association%20of%20Urology%20Position%20and%20Recommendations%20for%202021&as_vis=0&as_sdt=0,33 "HTTP/1.1 200 OK"
+2025-03-23 18:56:54,045 - prostate_cancer_analysis - INFO - Found publication: Prostate-specific antigen testing as part of a risk-adapted early detection strategy for prostate cancer: European Association of Urology position and recommendations …
+2025-03-23 18:56:54,207 - prostate_cancer_analysis - INFO - Successfully downloaded: https://www.sciencedirect.com/science/article/pii/S0302283821019278
+2025-03-23 18:56:54,403 - prostate_cancer_analysis - ERROR - Error extracting text from ./documents/inclusion/article_in_0.pdf: EOF marker not found
+2025-03-23 18:57:07,086 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-23 19:23:36,960 - prostate_cancer_analysis - INFO - Processing 1 exclusion PDFs...
+2025-03-23 19:23:36,970 - prostate_cancer_analysis - ERROR - Error extracting text from Downloads/s41181-021-00149-6.pdf: [Errno 2] No such file or directory: 'Downloads/s41181-021-00149-6.pdf'
+2025-03-23 19:23:36,971 - prostate_cancer_analysis - ERROR - Failed to extract text from: Downloads/s41181-021-00149-6.pdf
+2025-03-23 19:23:36,971 - prostate_cancer_analysis - INFO - Processing 1 inclusion PDFs...
+2025-03-23 19:23:36,971 - prostate_cancer_analysis - ERROR - Error extracting text from Downloads/Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main: [Errno 2] No such file or directory: 'Downloads/Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main'
+2025-03-23 19:23:36,971 - prostate_cancer_analysis - ERROR - Failed to extract text from: Downloads/Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main
+2025-03-23 19:23:36,972 - prostate_cancer_analysis - WARNING - No classification results to extract patterns from
+2025-03-23 19:24:54,031 - prostate_cancer_analysis - INFO - Processing 1 exclusion PDFs...
+2025-03-23 19:25:04,858 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-23 19:25:04,858 - prostate_cancer_analysis - INFO - Classified exclusion document: s41181-021-00149-6.pdf
+2025-03-23 19:25:04,859 - prostate_cancer_analysis - INFO - Processing 1 inclusion PDFs...
+2025-03-23 19:25:04,860 - prostate_cancer_analysis - ERROR - Error extracting text from Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main: [Errno 2] No such file or directory: 'Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main'
+2025-03-23 19:25:04,860 - prostate_cancer_analysis - ERROR - Failed to extract text from: Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main
+2025-03-23 19:25:14,048 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-23 19:25:14,048 - prostate_cancer_analysis - WARNING - Could not parse JSON from response, returning raw text
+2025-03-23 19:26:15,769 - prostate_cancer_analysis - INFO - Processing 1 exclusion PDFs...
+2025-03-23 19:26:24,224 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-23 19:26:24,224 - prostate_cancer_analysis - INFO - Classified exclusion document: s41181-021-00149-6.pdf
+2025-03-23 19:26:24,225 - prostate_cancer_analysis - INFO - Processing 1 inclusion PDFs...
+2025-03-23 19:26:24,225 - prostate_cancer_analysis - ERROR - Error extracting text from Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main: [Errno 2] No such file or directory: 'Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main'
+2025-03-23 19:26:24,225 - prostate_cancer_analysis - ERROR - Failed to extract text from: Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main
+2025-03-23 19:26:32,736 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-23 19:26:51,747 - prostate_cancer_analysis - INFO - Processing 1 exclusion PDFs...
+2025-03-23 19:29:10,079 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-23 19:29:10,080 - prostate_cancer_analysis - INFO - Classified exclusion document: s41181-021-00149-6.pdf
+2025-03-23 19:29:10,081 - prostate_cancer_analysis - INFO - Processing 1 inclusion PDFs...
+2025-03-23 19:29:15,457 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-23 19:29:15,458 - prostate_cancer_analysis - INFO - Classified inclusion document: Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main.pdf
+2025-03-23 19:29:21,900 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-23 19:29:21,901 - prostate_cancer_analysis - WARNING - Could not parse JSON from response, returning raw text
