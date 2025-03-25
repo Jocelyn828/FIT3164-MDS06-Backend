@@ -246,13 +246,20 @@ class LocalPDFAnalyzer:
 if __name__ == "__main__":
     analyzer = LocalPDFAnalyzer(model="deepseek-r1:1.5b")
     
-    exclusion_pdfs = [
-        "s41181-021-00149-6.pdf"
-    ]
+    L1_exclusion_folder ="./L1_exclusion_pdfs"
+    L2_exclusion_folder ="./L2_exclusion_pdfs"
+    inclusion_folder ="./inclusion_pdfs"
     
-    inclusion_pdfs = [
-        "Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main.pdf"
-    ]
+    # Get 10 Level 1 Excluded PDFs
+    L1_exclusion = [os.path.join(L1_exclusion_folder, f) for f in os.listdir(L1_exclusion_folder) if f.endswith(".pdf")]
+
+    # Get 10 Level 2 Excluded PDFs
+    L2_exclusion = [os.path.join(L2_exclusion_folder, f) for f in os.listdir(L2_exclusion_folder) if f.endswith(".pdf")]
+    exclusion_pdfs = L1_exclusion + L2_exclusion
+
+    # Get 10 Included PDFs
+    inclusion_pdfs = [os.path.join(inclusion_folder, f) for f in os.listdir(inclusion_folder) if f.endswith(".pdf")]
+
     
     # Run the analysis
     results = analyzer.process_pdf_files(exclusion_pdfs, inclusion_pdfs)

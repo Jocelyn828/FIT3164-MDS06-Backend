@@ -44,3 +44,130 @@
 2025-03-23 19:29:15,458 - prostate_cancer_analysis - INFO - Classified inclusion document: Prostate-specific Antigen Testing as Part of a Risk-Adapted Early Detection Strategy for Prostate Cancer_ European Association of Urology Position and Recommendations for 2021 - 1-s2.0-S0302283821019278-main.pdf
 2025-03-23 19:29:21,900 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
 2025-03-23 19:29:21,901 - prostate_cancer_analysis - WARNING - Could not parse JSON from response, returning raw text
+2025-03-24 23:36:40,667 - prostate_cancer_analysis - INFO - Processing 20 exclusion PDFs...
+2025-03-24 23:36:54,944 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:36:54,946 - prostate_cancer_analysis - INFO - Classified exclusion document: article_960.pdf
+2025-03-24 23:37:04,292 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:37:04,294 - prostate_cancer_analysis - INFO - Classified exclusion document: article_938.pdf
+2025-03-24 23:37:11,317 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:37:11,318 - prostate_cancer_analysis - INFO - Classified exclusion document: article_933.pdf
+2025-03-24 23:37:22,827 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:37:22,828 - prostate_cancer_analysis - INFO - Classified exclusion document: article_932.pdf
+2025-03-24 23:37:30,368 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:37:30,369 - prostate_cancer_analysis - INFO - Classified exclusion document: article_934.pdf
+2025-03-24 23:37:40,887 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:37:40,888 - prostate_cancer_analysis - INFO - Classified exclusion document: article_944.pdf
+2025-03-24 23:37:49,986 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:37:49,988 - prostate_cancer_analysis - INFO - Classified exclusion document: article_956.pdf
+2025-03-24 23:37:57,643 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:37:57,644 - prostate_cancer_analysis - INFO - Classified exclusion document: article_943.pdf
+2025-03-24 23:38:11,324 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:38:11,325 - prostate_cancer_analysis - INFO - Classified exclusion document: article_957.pdf
+2025-03-24 23:38:24,816 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:38:24,817 - prostate_cancer_analysis - INFO - Classified exclusion document: article_955.pdf
+2025-03-24 23:38:36,315 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:38:36,316 - prostate_cancer_analysis - INFO - Classified exclusion document: article_48.pdf
+2025-03-24 23:38:45,600 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:38:45,601 - prostate_cancer_analysis - INFO - Classified exclusion document: article_71.pdf
+2025-03-24 23:38:54,110 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:38:54,111 - prostate_cancer_analysis - INFO - Classified exclusion document: article_81.pdf
+2025-03-24 23:39:06,164 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:39:06,166 - prostate_cancer_analysis - INFO - Classified exclusion document: article_80.pdf
+2025-03-24 23:39:17,297 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:39:17,297 - prostate_cancer_analysis - INFO - Classified exclusion document: article_55.pdf
+2025-03-24 23:39:25,150 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:39:25,152 - prostate_cancer_analysis - INFO - Classified exclusion document: article_82.pdf
+2025-03-24 23:39:48,562 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:39:48,563 - prostate_cancer_analysis - INFO - Classified exclusion document: article_50.pdf
+2025-03-24 23:39:57,631 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:39:57,633 - prostate_cancer_analysis - INFO - Classified exclusion document: article_87.pdf
+2025-03-24 23:40:04,978 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:40:04,979 - prostate_cancer_analysis - INFO - Classified exclusion document: article_53.pdf
+2025-03-24 23:40:11,474 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:40:11,476 - prostate_cancer_analysis - INFO - Classified exclusion document: article_52.pdf
+2025-03-24 23:40:11,477 - prostate_cancer_analysis - INFO - Processing 10 inclusion PDFs...
+2025-03-24 23:40:26,123 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:40:26,125 - prostate_cancer_analysis - INFO - Classified inclusion document: article_4.pdf
+2025-03-24 23:40:37,636 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:40:37,637 - prostate_cancer_analysis - INFO - Classified inclusion document: article_5.pdf
+2025-03-24 23:40:51,111 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:40:51,112 - prostate_cancer_analysis - INFO - Classified inclusion document: article_7.pdf
+2025-03-24 23:41:04,058 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:41:04,059 - prostate_cancer_analysis - INFO - Classified inclusion document: article_6.pdf
+2025-03-24 23:41:12,728 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:41:12,729 - prostate_cancer_analysis - INFO - Classified inclusion document: article_2.pdf
+2025-03-24 23:41:24,110 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:41:24,111 - prostate_cancer_analysis - INFO - Classified inclusion document: article_3.pdf
+2025-03-24 23:41:33,675 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:41:33,677 - prostate_cancer_analysis - INFO - Classified inclusion document: article_11.pdf
+2025-03-24 23:41:49,540 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:41:49,541 - prostate_cancer_analysis - INFO - Classified inclusion document: article_10.pdf
+2025-03-24 23:42:01,150 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:42:01,151 - prostate_cancer_analysis - INFO - Classified inclusion document: article_0.pdf
+2025-03-24 23:42:06,626 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-24 23:42:06,628 - prostate_cancer_analysis - INFO - Classified inclusion document: article_9.pdf
+2025-03-24 23:42:11,635 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:19:50,245 - prostate_cancer_analysis - INFO - Processing 20 exclusion PDFs...
+2025-03-25 09:20:05,922 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:20:05,926 - prostate_cancer_analysis - INFO - Classified exclusion document: article_960.pdf
+2025-03-25 09:20:18,975 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:20:18,976 - prostate_cancer_analysis - INFO - Classified exclusion document: article_938.pdf
+2025-03-25 09:20:29,591 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:20:29,593 - prostate_cancer_analysis - INFO - Classified exclusion document: article_933.pdf
+2025-03-25 09:20:38,169 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:20:38,170 - prostate_cancer_analysis - INFO - Classified exclusion document: article_932.pdf
+2025-03-25 09:20:46,019 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:20:46,021 - prostate_cancer_analysis - INFO - Classified exclusion document: article_934.pdf
+2025-03-25 09:20:57,589 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:20:57,590 - prostate_cancer_analysis - INFO - Classified exclusion document: article_944.pdf
+2025-03-25 09:21:14,058 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:21:14,059 - prostate_cancer_analysis - INFO - Classified exclusion document: article_956.pdf
+2025-03-25 09:21:24,012 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:21:24,014 - prostate_cancer_analysis - INFO - Classified exclusion document: article_943.pdf
+2025-03-25 09:21:33,109 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:21:33,111 - prostate_cancer_analysis - INFO - Classified exclusion document: article_957.pdf
+2025-03-25 09:21:43,048 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:21:43,050 - prostate_cancer_analysis - INFO - Classified exclusion document: article_955.pdf
+2025-03-25 09:21:55,876 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:21:55,877 - prostate_cancer_analysis - INFO - Classified exclusion document: article_48.pdf
+2025-03-25 09:22:00,976 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:22:00,977 - prostate_cancer_analysis - INFO - Classified exclusion document: article_71.pdf
+2025-03-25 09:22:06,923 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:22:06,924 - prostate_cancer_analysis - INFO - Classified exclusion document: article_81.pdf
+2025-03-25 09:22:18,088 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:22:18,090 - prostate_cancer_analysis - INFO - Classified exclusion document: article_80.pdf
+2025-03-25 09:22:30,357 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:22:30,359 - prostate_cancer_analysis - INFO - Classified exclusion document: article_55.pdf
+2025-03-25 09:22:36,496 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:22:36,497 - prostate_cancer_analysis - INFO - Classified exclusion document: article_82.pdf
+2025-03-25 09:22:46,501 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:22:46,503 - prostate_cancer_analysis - INFO - Classified exclusion document: article_50.pdf
+2025-03-25 09:22:56,828 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:22:56,830 - prostate_cancer_analysis - INFO - Classified exclusion document: article_87.pdf
+2025-03-25 09:23:06,105 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:23:06,106 - prostate_cancer_analysis - INFO - Classified exclusion document: article_53.pdf
+2025-03-25 09:23:18,773 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:23:18,775 - prostate_cancer_analysis - INFO - Classified exclusion document: article_52.pdf
+2025-03-25 09:23:18,776 - prostate_cancer_analysis - INFO - Processing 10 inclusion PDFs...
+2025-03-25 09:23:30,552 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:23:30,553 - prostate_cancer_analysis - INFO - Classified inclusion document: article_4.pdf
+2025-03-25 09:23:37,078 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:23:37,079 - prostate_cancer_analysis - INFO - Classified inclusion document: article_5.pdf
+2025-03-25 09:23:50,830 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:23:50,831 - prostate_cancer_analysis - INFO - Classified inclusion document: article_7.pdf
+2025-03-25 09:24:04,112 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:24:04,114 - prostate_cancer_analysis - INFO - Classified inclusion document: article_6.pdf
+2025-03-25 09:24:13,143 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:24:13,144 - prostate_cancer_analysis - INFO - Classified inclusion document: article_2.pdf
+2025-03-25 09:24:24,149 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:24:24,151 - prostate_cancer_analysis - INFO - Classified inclusion document: article_3.pdf
+2025-03-25 09:24:32,515 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:24:32,517 - prostate_cancer_analysis - INFO - Classified inclusion document: article_11.pdf
+2025-03-25 09:24:44,426 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:24:44,428 - prostate_cancer_analysis - INFO - Classified inclusion document: article_10.pdf
+2025-03-25 09:24:55,562 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:24:55,563 - prostate_cancer_analysis - INFO - Classified inclusion document: article_0.pdf
+2025-03-25 09:25:01,590 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:25:01,590 - prostate_cancer_analysis - INFO - Classified inclusion document: article_9.pdf
+2025-03-25 09:25:07,338 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-25 09:25:07,340 - prostate_cancer_analysis - WARNING - Could not parse JSON from response, returning raw text
