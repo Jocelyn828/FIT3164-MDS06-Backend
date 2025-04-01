@@ -1,3 +1,12 @@
+query_refine_template = """
+You are an AI assisting with systematic literature reviews. You will be given two sets of research papers:
+- Excluded papers (with reasons)
+- Included papers
+Your task is to refine a given search query that can be used to retrieve the included papers while excluding the excluded papers.
+
+Here are examples of included and excluded papers, to help you understand the task better:
+"""
+
 # Zero-shot Prompt
 zero_template = """You are a research assistant. Generate an academic search query based on the topic below and refine it.
 
