@@ -21,25 +21,17 @@ logger = logging.getLogger("prostate_cancer_analysis")
 Path("./results").mkdir(exist_ok=True)
 
 class LocalPDFAnalyzer:
-    def __init__(self, model="deepseek-r1:1.5b"):
+    def __init__(self, model="gemma:7b"):
         self.model = model
             
         self.exclusion_criteria = [
             "Not Prostate Cancer/ irrelevant/ not related to study objective",
-            "Treatment/ management/ diagnosis",
+            "Unrelated (Treatment/Management/Diagnosis - Not prostate cancer-specific)",
             "Not by country health authorities or medical organisation",
             "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
-            "Management and/or treatment"
+            "Unrelated (Management/Treatment - Not prostate cancer-specific)"
         ]
         
-        self.inclusion_criteria = [
-            "Clinical trials with human subjects",
-            "Studies reporting treatment outcomes",
-            "Research on prostate cancer biomarkers",
-            "Meta-analyses of prostate cancer interventions",
-            "Studies on quality of life in prostate cancer patients",
-            "Research on prostate cancer screening methods"
-        ]
     
     def extract_text_from_pdf(self, pdf_path):
         try:
@@ -59,11 +51,55 @@ class LocalPDFAnalyzer:
             logger.error(f"Error extracting text from {pdf_path}: {str(e)}")
             return ""
     
+    def summarize_document(self, text):
+        """Summarize document to reduce token count"""
+        if not text.strip():
+            return ""
+            
+        try:
+            # Get document length to determine summary approach
+            word_count = len(text.split())
+            if word_count < 1000:
+                # For short documents, no need to summarize
+                return text[:5000]
+                
+            # For longer documents, extract key sections and summarize
+            prompt = f"""
+            Extract and summarize the most important information from this document about prostate cancer research.
+            Focus especially on:
+            1. The main topic/focus of the document
+            2. Research methodology (if applicable)
+            3. Key findings or recommendations
+            4. Any key terminology that characterizes this document
+            
+            Keep the summary under 1500 words while preserving the essential information.
+            
+            Document text:
+            {text[:8000]}
+            """
+            
+            response = ollama.chat(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                options={"temperature": 0.3}
+            )
+            
+            summary = response['message']['content']
+            return summary
+        except Exception as e:
+            logger.error(f"Error summarizing document: {str(e)}")
+            return text[:5000]  # Fallback to truncation
+    
     def classify_document(self, text, classification_type="exclusion"):
         if not text.strip():
             return "ERROR: Empty text, cannot classify"
             
         try:
+            # First summarize document if it's too long
+            word_count = len(text.split())
+            if word_count > 1000:
+                text = self.summarize_document(text)
+            
             if classification_type == "exclusion":
                 criteria = self.exclusion_criteria
                 prompt = f"""
@@ -75,22 +111,20 @@ class LocalPDFAnalyzer:
                 If it should NOT be excluded, simply state "INCLUDE: Document does not meet any exclusion criteria."
                 
                 Document text:
-                {text[:10000]}  # Limit text length to avoid token limits
+                {text}
                 
                 Your analysis:
                 """
             else:  # inclusion
-                criteria = self.inclusion_criteria
                 prompt = f"""
                 You are reviewing medical documents about prostate cancer.
-                Analyze the following document and determine if it meets these INCLUSION criteria:
-                {json.dumps(criteria, indent=2)}
+                Analyze the following document and determine if it meets INCLUSION criteria for prostate cancer research.
                 
-                If it meets any inclusion criteria, specify which criteria and explain why.
-                If it does NOT meet any inclusion criteria, state "EXCLUDE: Document does not meet any inclusion criteria."
+                If it meets inclusion criteria for prostate cancer research, explain why.
+                If it does NOT meet inclusion criteria, state "EXCLUDE: Document does not meet inclusion criteria."
                 
                 Document text:
-                {text[:10000]}  # Limit text length to avoid token limits
+                {text}
                 
                 Your analysis:
                 """
@@ -190,6 +224,9 @@ class LocalPDFAnalyzer:
             # Extract text
             text = self.extract_text_from_pdf(pdf_path)
             if text.strip():
+                # First summarize if needed
+                if len(text.split()) > 1000:
+                    text = self.summarize_document(text)
                 # Get classification
                 classification = self.classify_document(text, "exclusion")
                 result = {
@@ -207,6 +244,9 @@ class LocalPDFAnalyzer:
             # Extract text
             text = self.extract_text_from_pdf(pdf_path)
             if text.strip():
+                # First summarize if needed
+                if len(text.split()) > 1000:
+                    text = self.summarize_document(text)
                 # Get classification
                 classification = self.classify_document(text, "inclusion")
                 result = {
@@ -244,7 +284,7 @@ class LocalPDFAnalyzer:
 
 
 if __name__ == "__main__":
-    analyzer = LocalPDFAnalyzer(model="deepseek-r1:1.5b")
+    analyzer = LocalPDFAnalyzer(model="gemma:7b")
     
     L1_exclusion_folder ="./L1_exclusion_pdfs"
     L2_exclusion_folder ="./L2_exclusion_pdfs"
