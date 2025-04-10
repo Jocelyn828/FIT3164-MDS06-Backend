@@ -29,7 +29,38 @@ class LocalPDFAnalyzer:
             "Unrelated (Treatment/Management/Diagnosis - Not prostate cancer-specific)",
             "Not by country health authorities or medical organisation",
             "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
-            "Unrelated (Management/Treatment - Not prostate cancer-specific)"
+            "Intervention/ primary study/erratum/ conference abstract/ commentary/ clinic trial/ newsletter/ magazine/protocol/ literature review",
+            "Conhoference abstract",
+            "Cost effective/ budget impact",
+            "Attitude, belief, experience, behaviour, knowledge",
+            "Primary study or not systematic review",
+            "News, lecturer note, thesis, draft, proposal, module, stimulation, presscast, fact sheet, opinion, editorial",
+            "Non-english",
+            "Public consumption /patient info/ patient guide",
+            "Conhoference abstract",
+        ]
+
+        self.L1_exclusion_criteria = [
+            "Non-english",
+            "Public consumption /patient info/ patient guide",
+            "Not by country health authorities or medical organisation",
+            "Cost effective/ budget impact",
+            "Not Prostate Cancer/ irrelevant/ not related to study objective",
+            "Treatment/ management/ diagnosis",
+            "Intervention/ primary study/erratum/ conference abstract/ commentary/ clinic trial/ newsletter/ magazine/protocol/ literature review"
+        ]
+
+        self.L2_exclusion_criteria = [
+            "Intervention/ primary study/erratum/ conference abstract/ commentary/ clinic trial/ newsletter/ magazine/protocol/ literature review",
+            "Management and/or treatment",
+            "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
+            "For public consumption, patient info/guide, trial information",
+            "News, lecturer note, thesis, draft, proposal, module, stimulation, presscast, fact sheet, opinion, editorial",
+            "Not by country health authorities or medical organisation",
+            "Primary study or not systematic review",
+            "Conhoference abstract",
+            "Cost effectiveness",
+            "Attitude, belief, experience, behaviour, knowledge"
         ]
         
     
@@ -290,10 +321,10 @@ if __name__ == "__main__":
     L2_exclusion_folder ="./L2_exclusion_pdfs"
     inclusion_folder ="./inclusion_pdfs"
     
-    # Get 10 Level 1 Excluded PDFs
+    # Get Level 1 Excluded PDFs
     L1_exclusion = [os.path.join(L1_exclusion_folder, f) for f in os.listdir(L1_exclusion_folder) if f.endswith(".pdf")]
 
-    # Get 10 Level 2 Excluded PDFs
+    # Get Level 2 Excluded PDFs
     L2_exclusion = [os.path.join(L2_exclusion_folder, f) for f in os.listdir(L2_exclusion_folder) if f.endswith(".pdf")]
     exclusion_pdfs = L1_exclusion + L2_exclusion
 
