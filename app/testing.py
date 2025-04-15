@@ -40,30 +40,6 @@ class LocalPDFAnalyzer:
             "Conhoference abstract",
         ]
 
-        self.L1_exclusion_criteria = [
-            "Non-english",
-            "Public consumption /patient info/ patient guide",
-            "Not by country health authorities or medical organisation",
-            "Cost effective/ budget impact",
-            "Not Prostate Cancer/ irrelevant/ not related to study objective",
-            "Treatment/ management/ diagnosis",
-            "Intervention/ primary study/erratum/ conference abstract/ commentary/ clinic trial/ newsletter/ magazine/protocol/ literature review"
-        ]
-
-        self.L2_exclusion_criteria = [
-            "Intervention/ primary study/erratum/ conference abstract/ commentary/ clinic trial/ newsletter/ magazine/protocol/ literature review",
-            "Management and/or treatment",
-            "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
-            "For public consumption, patient info/guide, trial information",
-            "News, lecturer note, thesis, draft, proposal, module, stimulation, presscast, fact sheet, opinion, editorial",
-            "Not by country health authorities or medical organisation",
-            "Primary study or not systematic review",
-            "Conhoference abstract",
-            "Cost effectiveness",
-            "Attitude, belief, experience, behaviour, knowledge"
-        ]
-        
-    
     def extract_text_from_pdf(self, pdf_path):
         try:
             text = ""
@@ -123,41 +99,46 @@ class LocalPDFAnalyzer:
     
     def classify_document(self, text, classification_type="exclusion"):
         if not text.strip():
-            return "ERROR: Empty text, cannot classify"
+            return {"classification": "ERROR: Empty text, cannot classify", "keywords": [], "reason": ""}
             
         try:
-            # First summarize document if it's too long
-            word_count = len(text.split())
-            if word_count > 1000:
-                text = self.summarize_document(text)
-            
             if classification_type == "exclusion":
                 criteria = self.exclusion_criteria
                 prompt = f"""
-                You are reviewing medical documents about prostate cancer. 
-                Analyze the following document and determine if it should be EXCLUDED based on these criteria:
+                You are reviewing medical documents about prostate cancer that have been classified for EXCLUSION.
+                Your task is to analyze this document summary and explain WHY it meets exclusion criteria.
+                
+                Here are the possible exclusion criteria:
                 {json.dumps(criteria, indent=2)}
                 
-                If it should be excluded, explain which specific criterion it meets and why.
-                If it should NOT be excluded, simply state "INCLUDE: Document does not meet any exclusion criteria."
-                
-                Document text:
+                Document summary:
                 {text}
                 
-                Your analysis:
+                Provide your analysis in the following JSON format:
+                {{
+                  "classification": "The specific exclusion criterion that applies",
+                  "keywords": ["list", "of", "key", "terms", "from", "the", "summary", "that", "justify", "exclusion"],
+                  "reason": "A detailed explanation of why this document should be excluded based on the criterion"
+                }}
+                
+                Return ONLY the JSON with no additional text.
                 """
             else:  # inclusion
                 prompt = f"""
-                You are reviewing medical documents about prostate cancer.
-                Analyze the following document and determine if it meets INCLUSION criteria for prostate cancer research.
+                You are reviewing medical documents about prostate cancer that have been classified for INCLUSION.
+                Your task is to analyze this document summary and explain WHY it meets inclusion criteria for prostate cancer research.
                 
-                If it meets inclusion criteria for prostate cancer research, explain why.
-                If it does NOT meet inclusion criteria, state "EXCLUDE: Document does not meet inclusion criteria."
-                
-                Document text:
+                Document summary:
                 {text}
                 
-                Your analysis:
+                Provide your analysis in the following JSON format:
+                {{
+                  "classification": "Inclusion reason (brief phrase)",
+                  "keywords": ["list", "of", "key", "terms", "from", "the", "summary", "that", "justify", "inclusion"],
+                  "reason": "A detailed explanation of why this document should be included in prostate cancer research"
+                }}
+                
+                Return ONLY the JSON with no additional text.
                 """
                 
             # Call Ollama
@@ -168,13 +149,40 @@ class LocalPDFAnalyzer:
                 }
             ])
             
-            return response['message']['content']
+            result_text = response['message']['content']
+            
+            # Try to parse JSON from the response
+            try:
+                # Extract JSON if it's within code blocks
+                if "```json" in result_text and "```" in result_text.split("```json")[1]:
+                    json_str = result_text.split("```json")[1].split("```")[0]
+                    result = json.loads(json_str)
+                elif "```" in result_text and "```" in result_text.split("```")[1]:
+                    json_str = result_text.split("```")[1].split("```")[0]
+                    result = json.loads(json_str)
+                else:
+                    # Try direct JSON parsing
+                    result = json.loads(result_text)
+                
+                return result
+            except json.JSONDecodeError:
+                # Fallback - return as text if JSON parsing fails
+                logger.warning(f"Failed to parse JSON classification: {result_text}")
+                return {
+                    "classification": classification_type,
+                    "keywords": [],
+                    "reason": result_text
+                }
+                
         except Exception as e:
             logger.error(f"Error classifying document: {str(e)}")
-            return "ERROR: Classification failed"
+            return {
+                "classification": "ERROR",
+                "keywords": [],
+                "reason": f"Classification failed: {str(e)}"
+            }
     
     def extract_patterns(self, classification_results):
-        # Check if we have any results to analyze
         if not classification_results["exclusion_results"] and not classification_results["inclusion_results"]:
             logger.warning("No classification results to extract patterns from")
             return {
@@ -182,37 +190,58 @@ class LocalPDFAnalyzer:
                 "inclusion_patterns": []
             }
         
+        exclusion_data = [{
+            "file": r["file"],
+            "classification": r["classification"]["classification"] if isinstance(r["classification"], dict) else r["classification"],
+            "keywords": r["classification"]["keywords"] if isinstance(r["classification"], dict) and "keywords" in r["classification"] else [],
+            "reason": r["classification"]["reason"] if isinstance(r["classification"], dict) and "reason" in r["classification"] else ""
+        } for r in classification_results["exclusion_results"]]
+        
+        inclusion_data = [{
+            "file": r["file"],
+            "classification": r["classification"]["classification"] if isinstance(r["classification"], dict) else r["classification"],
+            "keywords": r["classification"]["keywords"] if isinstance(r["classification"], dict) and "keywords" in r["classification"] else [],
+            "reason": r["classification"]["reason"] if isinstance(r["classification"], dict) and "reason" in r["classification"] else ""
+        } for r in classification_results["inclusion_results"]]
+        
         prompt = f"""
-        You are analyzing a set of document classification results for prostate cancer research papers.
-        Based on the following classification results, identify common patterns, keywords, and phrases that 
-        characterize documents that should be included or excluded.
+        You are analyzing document classification results for prostate cancer research papers.
         
-        Classification results:
-        {json.dumps(classification_results, indent=2)}
+        ANALYZE THE EXCLUSION AND INCLUSION DOCUMENTS BELOW:
         
-        Extract and list:
-        1. Key exclusion patterns (terms, phrases, topics that indicate a document should be excluded)
-        2. Key inclusion patterns (terms, phrases, topics that indicate a document should be included)
+        EXCLUSION DOCUMENTS:
+        {json.dumps(exclusion_data, indent=2)}
         
-        Format your response as JSON strictly following this structure:
+        INCLUSION DOCUMENTS:
+        {json.dumps(inclusion_data, indent=2)}
+        
+        INSTRUCTIONS:
+        1. Analyze ONLY the 'classification', 'keywords', and 'reason' fields for these documents
+        2. Identify the most common patterns or themes for why documents were excluded or included
+        3. Base your patterns STRICTLY on the evidence in these fields - do not invent new reasons
+        4. For each pattern, list representative keywords from the actual documents
+        
+        Format your response as JSON with this simpler structure:
         {{
-          "exclusion_patterns": [
+        "exclusion_patterns": [
             {{
-              "term": "specific pattern term",
-              "description": "explanation of why this indicates exclusion"
+            "pattern": "Name of pattern/theme",
+            "keywords": ["representative", "keywords", "from", "documents"],
+            "evidence": "Brief explanation with examples from specific documents"
             }},
             ...
-          ],
-          "inclusion_patterns": [
+        ],
+        "inclusion_patterns": [
             {{
-              "term": "specific pattern term",
-              "description": "explanation of why this indicates inclusion"
+            "pattern": "Name of pattern/theme", 
+            "keywords": ["representative", "keywords", "from", "documents"],
+            "evidence": "Brief explanation with examples from specific documents"
             }},
             ...
-          ]
+        ]
         }}
         
-        Ensure there is no overlap between exclusion and inclusion patterns.
+        Return ONLY the JSON with no additional text.
         """
         
         try:
@@ -223,27 +252,39 @@ class LocalPDFAnalyzer:
                 }
             ])
             
-            # Try to parse JSON from the response
+            # Simplified JSON extraction
             content = response['message']['content']
-            # Find JSON content between ```json and ``` if present
-            if "```json" in content and "```" in content.split("```json")[1]:
-                json_str = content.split("```json")[1].split("```")[0]
-                return json.loads(json_str)
-            elif "```" in content and "```" in content.split("```")[1]:
-                json_str = content.split("```")[1].split("```")[0]
-                return json.loads(json_str)
             
-            # Try to find any JSON-like content
+            # Try to extract JSON using a more robust approach
             import re
-            json_match = re.search(r'(\{.*\})', content, re.DOTALL)
+            
+            # First try to find JSON between code blocks
+            if "```json" in content:
+                json_match = re.search(r'```json\s*([\s\S]*?)\s*```', content)
+                if json_match:
+                    return json.loads(json_match.group(1))
+            elif "```" in content:
+                json_match = re.search(r'```\s*([\s\S]*?)\s*```', content)
+                if json_match:
+                    return json.loads(json_match.group(1))
+            
+            # Then try to find any JSON object
+            json_match = re.search(r'(\{[\s\S]*\})', content, re.DOTALL)
             if json_match:
                 return json.loads(json_match.group(1))
                 
             logger.warning("Could not parse JSON from response, returning raw text")
-            return {"response": content}
+            return {
+                "error": "Failed to parse JSON response",
+                "raw_response": content
+            }
         except Exception as e:
             logger.error(f"Error extracting patterns: {str(e)}")
-            return {"error": str(e)}
+            return {
+                "error": str(e),
+                "exclusion_patterns": [],
+                "inclusion_patterns": []
+            }
     
     def process_pdf_files(self, exclusion_pdfs, inclusion_pdfs):
         exclusion_results = []
@@ -257,11 +298,15 @@ class LocalPDFAnalyzer:
             if text.strip():
                 # First summarize if needed
                 if len(text.split()) > 1000:
-                    text = self.summarize_document(text)
+                    summary = self.summarize_document(text)
+                else:
+                    summary = text[:5000]  # Use truncated text for shorter documents
+                    
                 # Get classification
-                classification = self.classify_document(text, "exclusion")
+                classification = self.classify_document(summary, "exclusion")
                 result = {
                     "file": os.path.basename(pdf_path),
+                    "summary": summary,  # Include the summary used for classification
                     "classification": classification
                 }
                 exclusion_results.append(result)
@@ -277,11 +322,15 @@ class LocalPDFAnalyzer:
             if text.strip():
                 # First summarize if needed
                 if len(text.split()) > 1000:
-                    text = self.summarize_document(text)
+                    summary = self.summarize_document(text)
+                else:
+                    summary = text[:5000]  # Use truncated text for shorter documents
+                    
                 # Get classification
-                classification = self.classify_document(text, "inclusion")
+                classification = self.classify_document(summary, "inclusion")
                 result = {
                     "file": os.path.basename(pdf_path),
+                    "summary": summary,  # Include the summary used for classification
                     "classification": classification
                 }
                 inclusion_results.append(result)
@@ -344,10 +393,12 @@ if __name__ == "__main__":
     if results['patterns'] and 'exclusion_patterns' in results['patterns'] and 'inclusion_patterns' in results['patterns']:
         print("\nKey Exclusion Patterns:")
         for pattern in results['patterns'].get('exclusion_patterns', [])[:5]:
-            print(f"- {pattern}")
+            print(f"- {pattern['pattern']}: {pattern['description']}")
+            print(f"  Example keywords: {', '.join(pattern['example_keywords'][:5])}")
         
         print("\nKey Inclusion Patterns:")
         for pattern in results['patterns'].get('inclusion_patterns', [])[:5]:
-            print(f"- {pattern}")
+            print(f"- {pattern['pattern']}: {pattern['description']}")
+            print(f"  Example keywords: {', '.join(pattern['example_keywords'][:5])}")
     
     print("\nDetailed results saved to the 'results' directory")
