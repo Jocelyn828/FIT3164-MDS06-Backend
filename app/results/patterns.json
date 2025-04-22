@@ -1,60 +1,69 @@
 {
   "exclusion_patterns": [
     {
-      "pattern": "Relevance to prostate cancer risk assessment and management",
+      "pattern": "Focus on quantitative modeling and decision support without direct clinical guidelines or patient outcomes.",
       "keywords": [
-        "Family history",
-        "Age",
-        "Testing challenges",
-        "Treatment consequences",
-        "Targeted testing"
+        "nomogram",
+        "risk assessment",
+        "clinical markers",
+        "fuzzy logic",
+        "neuro-fuzzy",
+        "optimization",
+        "survival analysis",
+        "cost analysis"
       ],
-      "evidence": "Articles addressing these aspects were excluded as they focused on broader areas rather than prostate cancer screening specifically."
-    },
-    {
-      "pattern": "Supports non-PSA based screening methods",
-      "keywords": [
-        "DRE",
-        "BRCA",
-        "Race"
-      ],
-      "evidence": "Articles advocating for non-PSA methods like digital rectal examinations or genetic testing were excluded as they did not prioritize PSA testing for prostate cancer screening."
-    },
-    {
-      "pattern": "Lack of evidence for prostate cancer screening",
-      "keywords": [],
-      "evidence": "No articles were found that explicitly denied the effectiveness of prostate cancer screening."
+      "evidence": "Article 0 highlights a compilation of references focused on modeling approaches (nomograms, fuzzy logic) and doesn't directly address patient outcomes or clinical guidelines. The emphasis is on tools rather than practical application or evaluation of screening effectiveness."
     }
   ],
   "inclusion_patterns": [
     {
-      "pattern": "Meets criteria for prostate cancer research",
+      "pattern": "Direct relevance to clinical guidelines and recommendations for PSA testing and management.",
       "keywords": [
-        "PSA screening",
-        "Shared decision-making",
-        "Randomized controlled trials",
-        "Prostate cancer-specific mortality"
+        "PSA",
+        "screening",
+        "referral thresholds",
+        "life expectancy",
+        "management guidelines",
+        "DRE",
+        "baseline PSA"
       ],
-      "evidence": "Articles addressing RCTs, guidelines, and shared decision-making related to prostate cancer screening were included."
+      "evidence": "Articles 9 and others explicitly provide guidelines for PSA testing, referral criteria, and considerations for different patient populations, demonstrating direct clinical relevance."
     },
     {
-      "pattern": "Supports PSA testing for prostate cancer screening",
+      "pattern": "Focus on risk assessment and impact on patient outcomes in prostate cancer screening.",
       "keywords": [
-        "PSA testing",
-        "Early detection",
-        "Prostate cancer"
+        "risk assessment",
+        "survival",
+        "incidence",
+        "HOXB13",
+        "androgen receptor inhibitors",
+        "comorbidity",
+        "life expectancy"
       ],
-      "evidence": "Articles providing evidence for the efficacy of PSA testing in reducing mortality and detecting early-stage prostate cancer were included."
+      "evidence": "Articles 10 and others emphasize the use of risk calculators, evaluation of screening impact on survival and incidence, and consideration of factors like comorbidity and life expectancy, all indicative of a focus on patient outcomes."
     },
     {
-      "pattern": "Relevance to prostate cancer screening",
+      "pattern": "Focus on interpreting and applying research findings related to prostate cancer detection and diagnosis.",
       "keywords": [
-        "PSA screening",
-        "Prostate cancer mortality",
-        "Harm considerations",
-        "Informed decision-making"
+        "screening",
+        "risk assessment",
+        "PSA",
+        "clinical markers",
+        "survival analysis"
       ],
-      "evidence": "Articles discussing the benefits and potential harms of prostate cancer screening, alongside patient decision-making considerations, were included."
+      "evidence": "Many articles directly address the interpretation and implementation of research findings, particularly related to PSA testing, risk assessment tools, and survival analysis, thus being relevant to evidence-based practice."
+    },
+    {
+      "pattern": "Addressing the complexities of early detection and management strategies.",
+      "keywords": [
+        "early detection",
+        "screening",
+        "risk assessment",
+        "management",
+        "clinical markers",
+        "nomogram"
+      ],
+      "evidence": "Several documents tackle the nuances of early-stage prostate cancer, including screening strategies, risk assessment, and clinical markers."
     }
   ]
 }

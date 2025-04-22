@@ -1,286 +1,412 @@
 [
   {
-    "file": "article_1095(Not Prostate Cancer_irrelevant_not related to study objective).pdf",
-    "summary": "## Summary of the Report: Evidence Gaps for Drugs and Medical Devices at Market Entry in Europe and Potential Solutions\n\n**Main findings:**\n\n* Lack of data on long-term safety and efficacy of many drugs and medical devices at market entry.\n* Limited clinical data on the interaction between multiple devices and drugs.\n* Regulatory frameworks may not adequately address the risks associated with new technologies.\n\n**Recommendations:**\n\n* Strengthening pre-market assessment procedures.\n* Promoting post-market surveillance and data collection.\n* Enhancing collaboration between regulators, industry, and healthcare professionals.\n* Investing in research infrastructure and expertise for medical technology evaluation.\n\n**Key issues:**\n\n* Difficulty in predicting long-term safety and efficacy of new drugs and devices.\n* Lack of standardized methodologies for clinical evaluation.\n* Limited access to healthcare data in Europe.\n* Need for improved risk-benefit assessment and management.\n\n**Target audience:**\n\n* Policymakers and regulators\n* Healthcare professionals\n* Industry stakeholders\n* Researchers\n\n**Significance:**\n\n* Provides evidence-based recommendations to improve the regulation and use of new drugs and medical devices in Europe.\n* Highlights the need for continuous monitoring and improvement of healthcare technologies.\n\n**Additional notes:**\n\n* The report was compiled by the Belgian Health Care Knowledge Centre (KCE).\n* It is published under a Creative Commons license.\n* The document is available on the KCE website.",
-    "classification": {
-      "classification": "Not prostate cancer-related",
-      "keywords": [
-        "drugs",
-        "devices",
-        "market",
-        "entry",
-        "Europe",
-        "safety",
-        "efficacy",
-        "regulation",
-        "industry",
-        "healthcare"
-      ],
-      "reason": "The document focuses on the regulation and assessment of new drugs and medical devices in Europe, which is not directly related to prostate cancer."
-    }
-  },
-  {
-    "file": "article_1562(Treatment_management_diagnosis).pdf",
-    "summary": "## Summary of Proton Beam Therapy Evidence Review\n\n**Main Topic:** The document reviews the evidence for the use of Proton Beam Therapy (PBT) in treating various cancers and non-cancerous conditions.\n\n**Research Methodology:** The review included studies of patients receiving PBT as primary treatment or for recurrent disease, focusing on monotherapy, combination therapy, or as a boost to conventional radiation therapy.\n\n**Key Findings/Recommendations:**\n\n* PBT is recommended for coverage for malignant ocular tumors and is potentially beneficial for malignant brain, spinal, skull base, paranasal sinus, and juxtaspinal tumors, pediatric cancers, and selected non-cancerous conditions.\n* Evidence for the use of PBT in treating other cancers and non-cancerous conditions is limited and often of low quality.\n* More high-quality studies are needed to determine the effectiveness of PBT for various conditions.\n\n**Areas of Uncertainty:**\n\n* Lack of comparative studies for many conditions.\n* Variability in treatment protocols and patient characteristics across studies.\n* Limited data on the long-term safety and efficacy of PBT.\n\n**Conclusion:**\n\nThe document concludes that PBT has potential clinical benefit for treating certain cancers and non-cancerous conditions, but further research is needed to establish its effectiveness and safety in different scenarios.",
-    "classification": {
-      "classification": "Not prostate cancer-specific",
-      "keywords": [
-        "Proton Beam Therapy",
-        "Cancers",
-        "Non-cancerous conditions",
-        "Treatment",
-        "Evidence review"
-      ],
-      "reason": "The document focuses on the evidence for Proton Beam Therapy in treating various cancers and non-cancerous conditions, which is not specifically related to prostate cancer."
-    }
-  },
-  {
-    "file": "article_1943(Intervention_primary study_erratum_conference abstract_commentary_clinic trial_newsletter_magazine_protocol_literature review).pdf",
-    "summary": "## Summary of Prostate Cancer Research on Psychosocial Burden and Interventions\n\n**Main Topic:**\n\nThe paper focuses on interventions that can alleviate the psychosocial burden experienced by prostate cancer patients undergoing active surveillance (AS).\n\n**Research Methodology:**\n\nA scoping review was conducted, involving:\n\n* Systematic search of six databases from August to October 2020.\n* Screening of titles and abstracts for mentions of prostate cancer, AS, and interventions affecting psychosocial burden.\n* Inclusion of all study types and research designs.\n\n**Key Findings/Recommendations:**\n\n* Interventions can be categorized into three themes:\n    * **Information and education:** Tailored information about PCa treatments, risks, benefits, protocols, lifestyle adjustments, and CAM.\n    * **Coping and (psycho)social support:** Strategies for managing anxiety, uncertainty, and peer support.\n    * **Lifestyle:** Emphasis on healthy behaviors like diet and exercise.\n* Psychosocial support during the first year of AS can enhance its appeal and improve adherence.\n* Research findings can contribute to developing a comprehensive psychosocial support program for AS patients.\n\n**Conclusion:**\n\nThe paper highlights the need for interventions to address the psychological challenges faced by prostate cancer patients undergoing AS, and suggests various strategies to improve their psychosocial well-being and engagement in the process.",
-    "classification": {
-      "classification": "Research study objectives",
-      "keywords": [
-        "Psychosocial burden",
-        "Interventions",
-        "Active surveillance",
-        "Prostate cancer"
-      ],
-      "reason": "The document focuses on interventions to address the psychosocial burden of prostate cancer patients undergoing active surveillance, which aligns with the study objective of exploring strategies to improve their psychosocial well-being. However, this specific document does not appear to be related to prostate cancer-related research or decision aid or guideline development, which aligns with the exclusion criterion."
-    }
-  },
-  {
     "file": "article_224(Non-english).pdf",
-    "summary": "**Zusammenfassung:**\n\n* PCa-Screening kann zu \u00dcberdiagnostik und \u00dcbertherapie f\u00fchren.\n* Die Rate der \u00dcberdiagnostik variiert zwischen 22-67%.\n* Die Anzahl von F\u00e4llen, die durch Screening zu einem Tod an PCa verhindern, variiert zwischen 5-58.\n* Die tats\u00e4chliche \u00dcberdiagnostik und -therapie ist schwer zu beurteilen.\n\n**Schl\u00fcsselpunkte:**\n\n* \u00dcberdiagnostik von PCa kann zu einer erh\u00f6hten Detektionsrate klinisch nicht-signi\ufb01kanter Karzinome f\u00fchren.\n* Die Rate von \u00dcberdiagnostik ist m\u00f6glicherweise h\u00f6her bei M\u00e4nnern afroamerikanischer Herkunft.\n* Die meisten \u00fcberdiagnostizierten Karzinome sind Niedrig-Risiko-Karzinome.\n* Die tats\u00e4chliche \u00dcberdiagnostik und -therapie ist schwer zu beurteilen.\n\n**Empfehlungen:**\n\n* Patienten sollten individuell \u00fcber die Risiken und Vorteile von PCa-Screening informiert werden.\n* Die Diagnose und Behandlung von PCa sollte auf den individuellen Bed\u00fcrfnissen des Patienten abgestimmt sein.",
     "classification": {
-      "classification": "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
+      "classification": "Non-English",
       "keywords": [
-        "\u00dcberdiagnostik",
-        "\u00dcbertherapie",
-        "Prostate Cancer",
-        "Screening",
-        "Detektionsrate",
-        "Risiko",
-        "Karzinom",
-        "Patienteninformation"
+        "Deutsch",
+        "Urologe",
+        "Europa",
+        "BMJ",
+        "JNCI",
+        "Biometrics"
       ],
-      "reason": "The document focuses on clinical implications of prostate cancer screening, rather than research study objectives or guidelines related to prostate cancer."
+      "reason": "The document is primarily a bibliography of sources, and the provided excerpt indicates many entries are described in German ('Der Urologe'). While some entries cite publications from English journals (BMJ, JNCI, Biometrics), the document itself is not in English. It appears to be a list of references and a summary in German, thus failing to meet the criteria for being an English-language document."
     }
   },
   {
     "file": "article_247(Public consumption_patient info_patient guide).pdf",
-    "summary": "## Summary of Prostate Cancer Research\n\n**Main Topic:** Research advancements in the diagnosis, staging, and treatment of prostate cancer.\n\n**Research Methodology:**\n- Studies investigating gene changes in prostate cancer cells to better understand cancer development and design targeted therapies.\n- Research on foods and substances that might prevent prostate cancer.\n- Development of more accurate tests for early detection of prostate cancer, including the Prostate Health Index (PHI) and 4Kscore test.\n- Advancement in imaging techniques like Color Doppler ultrasound and multiparametric MRI (mpMRI) for better staging of prostate cancer.\n\n**Key Findings/Recommendations:**\n- Newer tests offer improved accuracy for early detection of prostate cancer compared to the PSA test.\n- Genetic testing can identify men at high risk of prostate cancer and guide treatment decisions.\n- Imaging tests like mpMRI can provide valuable information about the extent and aggressiveness of prostate cancer, aiding treatment selection.\n\n**Areas of Focus:**\n- Development of more precise tests for early detection and risk stratification.\n- Improvement of imaging techniques for accurate staging of prostate cancer.\n- Personalized treatment approaches based on individual risk factors and disease stage.\n\n**Unanswered Questions:**\n- Optimal combination of tests for early detection and diagnosis.\n- Development of more effective therapies for advanced prostate cancer.\n- Role of lifestyle factors in preventing or delaying prostate cancer progression.",
     "classification": {
-      "classification": "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
+      "classification": "Medical/Clinical Trial Information",
       "keywords": [
-        "diagnosis",
-        "staging",
+        "clinical practice guidelines",
+        "NCCN",
+        "tumor mutational burden",
+        "immune checkpoint inhibitors",
+        "chemotherapy",
+        "therapy",
         "treatment",
-        "prostate cancer"
+        "vaccine treatment",
+        "hormone therapy",
+        "cryosurgery",
+        "clinical trial",
+        "research highlights",
+        "comparative effectiveness",
+        "metastatic",
+        "progression",
+        "tumor",
+        "patients",
+        "oncology"
       ],
-      "reason": "The document focuses on reviewing advancements in the diagnosis, staging, and treatment of prostate cancer, which is not explicitly related to the study objective of the exclusion criteria."
+      "reason": "The document primarily provides information on medical treatments, clinical guidelines, and research related to cancer. It extensively details various therapies (hormone, cryosurgery, vaccine, etc.), clinical trial data, research findings, and clinical practice guidelines from organizations like NCCN. This focus on medical interventions and clinical research places it firmly within the category of medical/clinical trial information, and thus necessitates exclusion."
+    }
+  },
+  {
+    "file": "article_1095(Not Prostate Cancer_irrelevant_not related to study objective).pdf",
+    "classification": {
+      "classification": "Focus on processes or methodologies of regulatory bodies (e.g., NICE, FDA, EMA, HTA agencies) rather than direct clinical or health outcomes.",
+      "keywords": [
+        "NICE",
+        "FDA",
+        "EMA",
+        "HTA",
+        "methodology",
+        "clinical development",
+        "reimbursement",
+        "approval",
+        "CNEDiMTS",
+        "HTA requirements",
+        "policies",
+        "single technology appraisals",
+        "EUnetHTA",
+        "clinical development of medical devices",
+        "post-stroke rehabilitation devices",
+        "regulatory bodies",
+        "processes",
+        "policies"
+      ],
+      "reason": "The provided document primarily discusses the processes, methodologies, and policies employed by various regulatory bodies (NICE, FDA, EMA, HTA agencies) related to the approval and reimbursement of medical devices. Numerous entries directly outline the methodologies used by these bodies, such as the 'Methodology for the clinical development of medical devices' (Haute Authorit\u00e9 de Sant\u00e9, item 2021-09), discussions on HTA requirements, and commentary on the workings of EUnetHTA. The focus isn't on presenting or analyzing clinical or health outcomes resulting from specific interventions; instead, it details *how* these interventions are evaluated and regulated. Therefore, it aligns with the exclusion reason concerning descriptions of regulatory processes rather than findings related to clinical outcomes."
     }
   },
   {
     "file": "article_287(Not by country health authorities or medical organisation).pdf",
-    "summary": "## Summary of Prostate Cancer Research Document\n\n**Main Topic:**\n\nThe document highlights the recent FDA approval of a new imaging technology called piflufolastat F 18 (PYLARIFY\u00ae) for detecting prostate cancer cells. \n\n\n**Research Methodology:**\n\nThe research involved two phase III clinical trials testing the imaging tracer in patients with suspected prostate cancer recurrence. The trials evaluated the accuracy of the tracer in identifying cancer cells in lymph nodes and other body parts.\n\n\n**Key Findings/Recommendations:**\n\n- The new imaging technology offers unprecedented accuracy in tracking prostate cancer cells.\n- It can detect cancer cells directly and much earlier than traditional imaging methods.\n- This advancement will significantly improve treatment planning for both newly diagnosed and recurrent prostate cancer cases.\n\n\n**Key Terminology:**\n\n- **PSMA (Prostate-Specific Membrane Antigen)**: A protein found on the surface of prostate cancer cells.\n- **PET (Positron Emission Tomography)**: A medical imaging technique that detects metabolically active tissues.\n- **OSPREY Trial**: A clinical trial evaluating the efficacy of the new imaging technology in detecting prostate cancer recurrence.\n\n\n**Benefits:**\n\n- Early detection of prostate cancer recurrence allows for timely treatment intervention.\n- Improved treatment planning for both newly diagnosed and recurrent cases.\n- Provides valuable information about the extent of disease progression.\n\n\n**Patient Perspective:**\n\n- Kevin Taylor's story exemplifies the transformative power of the new imaging technology in detecting cancer recurrence and guiding treatment decisions.\n- The patient emphasizes the importance of early detection and accurate diagnosis in managing the disease.\n\n\n**Conclusion:**\n\nThe new imaging technology offers a significant advancement in prostate cancer diagnosis and treatment, providing valuable insights for both patients and healthcare providers.",
     "classification": {
-      "classification": "Intervention/ primary study/erratum/ conference abstract/ commentary/ clinic trial/ newsletter/ magazine/protocol/ literature review",
+      "classification": "Promotional/Marketing",
       "keywords": [
-        "clinical trials",
-        "imaging technology",
-        "FDA approval",
-        "piflufolastat F 18",
-        "PYLARIFY\u00ae"
+        "appointments",
+        "contact us",
+        "locations",
+        "giving",
+        "careers",
+        "connect",
+        "About MSK",
+        "find a doctor",
+        "cookie preferences",
+        "legal disclaimer",
+        "privacy policy",
+        "price transparency",
+        "public notices",
+        "Memorial Sloan Kettering Cancer Center",
+        "800-525-2225"
       ],
-      "reason": "The document describes a newly approved imaging technology for prostate cancer detection, falling within the exclusion criteria for primary studies or conference abstracts related to interventions or clinical trials."
+      "reason": "The document is a promotional piece from Memorial Sloan Kettering Cancer Center. Its primary purpose is to highlight a new therapy and promote the institution\u2019s services. The inclusion of contact information (800-525-2225), locations, career opportunities, giving options, and 'About MSK' sections, alongside phrases encouraging engagement ('connect,' 'find a doctor'), clearly indicate a marketing and promotional intent rather than presenting purely objective or scientific information. The presence of legal disclaimers, cookie preferences, and a privacy policy further reinforces the institutional promotional aspect."
     }
   },
   {
     "file": "article_656(Cost effective_budget impact).pdf",
-    "summary": "## Summary of Systematic Review on Cost-Effectiveness Models in Prostate Cancer\n\n**Main Topic:**\n\nThe review assesses the cost-effectiveness of new biomarkers and magnetic resonance imaging (MRI) for prostate cancer diagnosis.\n\n**Research Methodology:**\n\nA systematic review was conducted using relevant databases and guidelines, identifying 22 model-based economic evaluations of novel diagnostic methods in prostate cancer.\n\n**Key Findings:**\n\n* **Biomarkers:** All studies comparing new biomarkers to PSA testing found them to be cost-saving.\n* **MRI-guided biopsy:** Studies comparing MRI-guided biopsy to TRUS-guided biopsy found MRI-guided methods to be more cost-effective.\n* **Detection methods:** Newer detection methods showed a reduction in unnecessary biopsies and overtreatment.\n* **Cost-effectiveness of follow-up:** The most cost-effective follow-up strategy for negative initial biopsy was uncertain.\n\n**Key Terminology:**\n\n* **PSA:** Prostate-speci c antigen\n* **MRI:** Multiparametric magnetic resonance imaging\n* **PHI:** Prostate Health Index\n* **4Kscore:** A blood test measuring the levels of four different prostate-speci c proteins\n* **SelectMDx:** A urine test that detects DNA from cancer cells\n* **Cost-effectiveness:** The ratio of the cost of a treatment to the benefit gained\n\n**Limitations:**\n\n* Many models lacked data on real-world implementation and patient populations.\n* Model quality varied, with some lacking transparency and reproducibility.\n\n**Conclusion:**\n\nThe review suggests that new diagnostic tools for prostate cancer can be cost-effective, potentially reducing overdiagnosis and unnecessary biopsies. However, further research is needed to address limitations in current models and improve their real-world applicability.",
     "classification": {
-      "classification": "Primary study or not systematic review",
+      "classification": "Duplicate Content",
       "keywords": [
-        "Systematic review",
-        "Cost-effectiveness",
-        "Biomarkers",
-        "MRI",
-        "Prostate cancer"
-      ],
-      "reason": "The document is a primary study, not a systematic review, and does not provide a comprehensive analysis of multiple studies on cost-effectiveness models in prostate cancer."
-    }
-  },
-  {
-    "file": "article_121(Primary study or not systematic review).pdf",
-    "summary": "**Objective:**\n\n- To characterize a cohort of patients treated for incurable prostate cancer during the contemporary era of PSA screening at the authors' institution.\n- To determine patients' initial presentation (localized versus metastatic) and PSA screening status prior to diagnosis.\n\n**Methods:**\n\n- Electronic medical records of patients treated for stage IV prostate cancer between June 2008 and December 2014 were reviewed.\n- Patients were categorized into four groups based on initial presentation:\n    - Group 1: Localized disease with late biochemical recurrence (BCR)\n    - Group 2: Localized disease with early BCR\n    - Group 3: Asymptomatic metastatic disease\n    - Group 4: Symptomatic metastatic disease\n- PSA screening status was evaluated based on a cutoff age of 55.\n\n**Results:**\n\n- A total of 160 patients were analyzed, with 157 having complete records.\n- 173 patients had a diagnosis of metastatic prostate cancer.\n- Patients' initial presentation and PSA screening status were as follows:\n    - Group 1: 34 (21%)\n    - Group 2: 28 (18%)\n    - Group 3: 48 (31%)\n    - Group 4: 51 (32%)\n\n**Conclusion:**\n\nThe study provides insights into the characteristics of patients with incurable prostate cancer during the contemporary era of PSA screening. The majority of patients presented with metastatic disease, highlighting the limitations of PSA screening in early detection of advanced prostate cancer.",
-    "classification": {
-      "classification": "Not research study objectives",
-      "keywords": [
-        "PSA screening status",
-        "Contemporary era",
-        "Limitations of PSA screening",
-        "Characterization of patients",
-        "Metastatic disease"
-      ],
-      "reason": "The document focuses on characterizing a cohort of patients with incurable prostate cancer and determining their initial presentation and PSA screening status, rather than addressing the research study objectives related to prostate cancer-related decision aid, guideline or programme."
-    }
-  },
-  {
-    "file": "article_142(Others).pdf",
-    "summary": "Early Detection of Prostate Cancer \nWhat is PSA and how is it connected to prostate \ncancer?\nProstate-specific antigen (PSA) is a protein produced \nwithin the prostate gland. PSA is mostly found in semen, but small amounts can also be found in the blood of healthy men. PSA levels depend on age and naturally go up as you age. There are many reasons why PSA levels fluctuate and higher levels may indicate the presence of prostate cancer or other prostate conditions.\nProstate cancer is typically a slow growing cancer \nthat can be present for many years before causing symptoms. Prostate cancer is highly treatable if diagnosed in the early stages and a PSA test can be valuable in aiding early detection.\nWhat is a prostate-specific antigen (PSA) test?\nA prostate-specific antigen (PSA) test is a simple blood \ntest that measures the amount of PSA protein in your blood.  Measuring PSA levels can be an useful tool in diagnosing prostate cancer as well as monitoring the progress of the disease in someone who has already been diagnosed with prostate cancer.Who should get tested?\nIf you are a man over the age of 50, it\u2019\ns recommended \nthat you speak with your doctor about your risk of \ndeveloping prostate cancer and whether you should have a PSA test. Your healthcare provider may recommend a PSA test if you: \n\u2022\nare almost 50 years old\n\u2022have a family history of prostate cancer\n\u2022are of African ancestry\n\u2022have symptoms of prostate cancer\n\u2022have already been diagnosed with prostate cancer\nand are being monitored\nWhen is this test ordered?\nA PSA\n test may be ordered by your healthcare provider to:\n\u2022help detect prostate cancer early even if you don\u2019t\nhave any signs or symptoms\n\u2022check for cancer if you are experiencing signs orsymptoms of prostate cancer\n\u2022\nconfirm a diagnosis when other tests suggestprostate cancer\n\u2022\npredict a prognosis (outcome) for prostate cancer\n\u2022predict if cancer has spread outside the prostate\n\u2022plan treatment for prostate cancer\n\u2022monitor you if you are already being treated forprostate cancer\n\u2022\ndetermine if cancer treatments are working\n\u2022determine if cancer has come back after treatment\nProstate-Specific Antigen (PSA) Test\nThe third leading cause of cancer death, when prostate cancer is detected early, it\u2019s more likely to be successfully treated. men in Canada will be diagnosed with prostate cancer in their lifetime. \n\nHow can I get tested?\nTesting is completed by LifeLabs at a Patient Service \nCentre or via our mobile lab service (available in select cities) through a simple blood sample. You will require a completed test requisition from your healthcare provider.\nUnderstanding your results\nTest results will be provided directly to your healthcare \nprovider for discussion with you. The report will indicate:\n1. Total PSA level in the blood\n2. Free PSA level\n3. Ranges for PSA levels\nPSA levels depend on your age. As you get older, your \nPSA level will naturally go up. If you have a high PSA \nlevel, your doctor will talk to you about your options. A \nhigher than normal PSA level doesn\u2019t always mean you \nhave prostate cancer. High PSA levels can also indicate:\n\u2022 an enlarged prostate due to benign prostatic \nhyperplasia\n\u2022 an inflamed or infected prostate (called prostatitis)\n\u2022 a urinary tract infection\nIt\u2019s important for you to discuss your PSA level results with your doctor. Your doctor will help you determine your risk of prostate cancer in relation to your age, family history and other personal information.How is the test performed?\nBlood sample\nHow much does it cost?\nThe price of this test varies by province. The test \nmay be covered by your private insurance or provincial health plan under some circumstances. Talk to your doctor about your options.\nWhen will I get my results?\nResults are available to your healthcare provider \nwithin 2 weeks.\nSources\n\u2022 Statistics Canada:  \n\u201cProstate cancer trends in Canada, 1995 to 2012\u201d\n\u2022 Prostate Cancer Canada\n\u2022 Canadian Cancer Society\n",
-    "classification": {
-      "classification": "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
-      "keywords": [
-        "PSA test",
-        "Prostate cancer",
-        "Early detection",
-        "Diagnosis",
-        "Monitoring",
-        "Treatment",
-        "Risk assessment",
-        "Health plan"
-      ],
-      "reason": "The document focuses on providing information about PSA tests and their role in early detection, diagnosis, and monitoring of prostate cancer, which aligns with public health awareness and education rather than specific research study objectives related to prostate cancer."
-    }
-  },
-  {
-    "file": "article_377(Conference abstract).pdf",
-    "summary": "## Summary of the Research Paper on Age-Adjusted PSA Reference Values\n\nThis research paper reviews the existing literature to assess the variations in age-adjusted PSA reference values among healthy men across different ethnicities and populations. \n\n**Objective:**\n\n* To meta-analyze studies and derive a pooled international age-specific upper reference limit for PSA.\n\n**Methods:**\n\n* Literature search conducted in Embace, Medline, Cochrane Library, and other relevant sources.\n* Studies published in English with age-adjusted PSA reference values for healthy men were included.\n* Two reviewers independently assessed eligibility of citations and extracted data using a standardized sheet.\n\n**Results:**\n\n* The paper identifies studies that reported age-adjusted PSA reference values in healthy men.\n* Meta-analysis was performed to derive a pooled international age-specific upper reference limit for PSA.\n\n**Conclusion:**\n\n* The paper provides updated and comprehensive information on the appropriate reference values for PSA testing in healthy men of different ethnicities.\n* The pooled international age-speci\ufb01c upper reference limit for PSA can be used as a reliable guideline for clinical practice.\n\n**Key Findings:**\n\n* Variations in age-adjusted PSA reference values exist across different populations and ethnicities.\n* The pooled international age-speci\ufb01c upper reference limit for PSA is [insert the actual value].\n\n**Implications:**\n\n* The findings of this study can guide clinicians in interpreting PSA test results and diagnosing prostate cancer.\n* The knowledge of population-speci\ufb01c reference values is important for accurate diagnosis and early detection of prostate cancer.\n\n**Strengths:**\n\n* Comprehensive literature search strategy.\n* Independent assessment of eligibility by two reviewers.\n* Meta-analysis approach to derive a pooled reference limit.\n\n**Limitations:**\n\n* The review is limited to studies published in English.\n* Some studies included may have used different methodologies for determining reference values.\n\n**Overall, this research paper provides valuable insights into the variations in age-adjusted PSA reference values and offers a reliable guideline for clinical practice.**",
-    "classification": {
-      "classification": "Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
-      "keywords": [
-        "Variations in age-adjusted PSA reference values",
-        "Healthy men",
-        "Ethnicities",
-        "Population",
-        "PSA testing",
-        "Diagnosis",
-        "Early detection"
-      ],
-      "reason": "The document focuses on establishing reference values for PSA testing in healthy men, which aligns with the study objective of understanding the variations in age-adjusted PSA levels across different populations. However, it does not address decision aid, guideline or programme related to prostate cancer, which aligns with the exclusion criterion."
-    }
-  },
-  {
-    "file": "article_383(Cost effectiveness).pdf",
-    "summary": "## Summary of Prostate Cancer Research Paper\n\n**Main Topic:** The paper reviews the potential of polygenic risk scores (PRSs) to improve the cost-effectiveness of prostate cancer screening.\n\n**Research Methodology:** Systematic review of studies evaluating the cost-effectiveness of cancer screening interventions informed by polygenic risk scores compared to conventional screening modalities.\n\n**Key Findings/Recommendations:**\n\n* 8 out of 10 studies reviewed concluded that polygenic risk-informed prostate cancer screening was more cost-effective than alternatives.\n* The paper raises concerns about the cost, potential for false positives, overtreatment, and challenges in implementing PRS-based screening in admixed societies.\n\n**Additional Points:**\n\n* Polygenic risk scores reflect the combined effect of many genetic variants and can be predictive of disease risk even if individual variants have modest effects.\n* While PRSs may offer additional risk information, they may not significantly improve risk prediction among individuals with established risk factors like family history or monogenic mutations.\n* Implementing population-level PRS screening requires careful consideration of cost-effectiveness and potential harms.",
-    "classification": {
-      "classification": "Intervention/ primary study/erratum/ conference abstract/ commentary/ clinic trial/ newsletter/ magazine/protocol/ literature review",
-      "keywords": [
-        "Systematic review",
-        "Cost-effectiveness",
-        "Polygenic risk scores",
-        "Prostate cancer screening"
-      ],
-      "reason": "The document is a systematic review of studies evaluating the cost-effectiveness of polygenic risk-informed prostate cancer screening, falling within the exclusion criterion of primary studies or literature reviews."
-    }
-  },
-  {
-    "file": "article_412(Attitude, belief, experience, behaviour, knowledge).pdf",
-    "summary": "## Summary of Prostate Cancer Research Among Women\n\n**Main Topic:** This systematic review investigates women's knowledge of prostate cancer (PCa) with a focus on their awareness of the signs, symptoms, causes, risk factors, and screening modalities.\n\n**Research Methodology:** The study employed a convergent segregated approach to gather both quantitative and qualitative data on women's knowledge of PCa.\n\n**Key Findings:**\n\n* Women demonstrate awareness of PCa symptoms and encourage their partners to seek medical attention.\n* Studies suggest that PSA testing and DRE can aid in PCa screening, despite initial controversies.\n* Women can play various roles in promoting early detection of PCa as information seekers, advocates, health advisors, and support persons.\n\n**Areas of Interest:**\n\n* The review highlights the potential for women to contribute to the early detection of PCa through their observations and knowledge gaps concerning the disease.\n* The need for more research on women's awareness of PCa is emphasized.\n\n**Conclusion:**\n\nThis systematic review aims to provide comprehensive evidence regarding women's knowledge of PCa, empowering women to actively participate in the early detection of the disease.",
-    "classification": {
-      "classification": "Not research study objectives",
-      "keywords": [
-        "women",
+        "systematic reviews",
+        "economic evaluation",
+        "cost-effectiveness",
+        "screening",
         "prostate cancer",
-        "awareness",
-        "signs",
-        "symptoms",
-        "causes",
-        "risk factors",
-        "screening modalities"
+        "systematic review",
+        "economic evaluation",
+        "cost-effectiveness"
       ],
-      "reason": "The document focuses on investigating women's knowledge of prostate cancer, rather than conducting research on prostate cancer itself. It does not align with the objective of the exclusion criterion."
+      "reason": "The document heavily references and discusses numerous systematic reviews and economic evaluations of prostate cancer screening, including specifically mentioning \u2018Sanghera S, Coast J, Martin RM, Donovan JL, Mohiuddin S. Cost-effectiveness of prostate cancer screening: a systematic review of decision-analytical models\u2019 (reference 182). Furthermore, it refers to a systematic review and comparative modeling analyses (references 86, 87, 88, 89, 90). The overall focus on existing reviews and evaluations strongly suggests that the document itself is likely a summary or overview of previously published works, and thus constitutes a duplicate or derivative of existing systematic reviews and economic evaluations rather than presenting new primary data or analysis. The repeated discussion of these methodologies further strengthens this assessment."
+    }
+  },
+  {
+    "file": "article_1562(Treatment_management_diagnosis).pdf",
+    "classification": {
+      "classification": "Document primarily lists procedure codes, CPT codes, HCPCS codes, and ICD codes related to proton beam therapy rather than presenting original research or clinical trial data.",
+      "keywords": [
+        "procedure codes",
+        "CPT codes",
+        "HCPCS codes",
+        "ICD codes",
+        "beam radiation",
+        "treatment delivery",
+        "stereotactic body radiation therapy",
+        "prospectively",
+        "original research",
+        "clinical trial data"
+      ],
+      "reason": "The provided document appears to be a compendium of billing and coding information related to proton beam therapy. It predominantly lists various procedure codes (D0004ZZ, D0014ZZ, etc.), CPT codes (32701, 77373), HCPCS Level II codes (S8030), and ICD codes. It catalogs specific beam radiation targets and delivery methods. The document does not contain any original research findings, clinical trial data, patient outcomes, or other evidence-based findings. It functions as a reference for healthcare providers regarding billing and coding practices, not as a source of primary research or clinical investigation."
+    }
+  },
+  {
+    "file": "article_1943(Intervention_primary study_erratum_conference abstract_commentary_clinic trial_newsletter_magazine_protocol_literature review).pdf",
+    "classification": {
+      "classification": "Focus on Supportive Care",
+      "keywords": [
+        "Supportive Care",
+        "Supportive Care in Cancer",
+        "lifestyle risk factors",
+        "cancer prevention and control",
+        "motivational interviewing",
+        "sexual activity"
+      ],
+      "reason": "The document primarily focuses on supportive care aspects related to prostate cancer, including lifestyle modifications (smoking, sports, sexual activity), cancer prevention, and motivational interviewing. While it references active surveillance, the emphasis is on the supportive care interventions and their impact on patients undergoing active surveillance, rather than the active surveillance process itself. This aligns with an exclusion criterion prioritizing literature specifically addressing the active surveillance protocol and its management, rather than general supportive care strategies related to it. Many entries detail interventions (motivational interviewing) which are supportive in nature and thus do not align with the core criteria."
     }
   },
   {
     "file": "article_48(Intervention_primary study_erratum_conference abstract_commentary_clinic trial_newsletter_magazine_protocol_literature review).pdf",
-    "summary": "## Summary of \"Screening Programmes: A Short Guide\"\n\n**Main Topic:**\n\nThe guide emphasizes the importance of maximizing the benefits and minimizing the harm of screening programmes for noncommunicable diseases in the WHO European Region.\n\n**Research Methodology:**\n\nThe document relies on existing evidence and provides general guidance, rather than presenting specific research findings.\n\n**Key Findings:**\n\n* Screening involves identifying asymptomatic individuals with the potential for disease through regular testing.\n* Benefits of screening include early detection and treatment, leading to improved outcomes.\n* Potential harm includes overdiagnosis and unnecessary interventions.\n* Balancing these benefits and harms is crucial when deciding whether to implement or continue a screening programme.\n\n**Recommendations:**\n\n* Utilize Wilson & Jungner's principles of screening for effective programme design.\n* Consider the context and population characteristics when evaluating benefits and harms.\n* Pilot test and implement screening programmes gradually.\n* Ensure proper leadership, coordination, and funding for sustainable screening services.\n* Regularly monitor and evaluate programme performance to optimize effectiveness.\n\n**Conclusion:**\n\nThe guide emphasizes the importance of evidence-based screening practices and encourages countries to tailor their approaches to their specific needs and resources.",
     "classification": {
-      "classification": "Not prostate cancer-specific",
+      "classification": "Lists and Directories",
       "keywords": [
-        "screening",
-        "programme",
-        "noncommunicable",
-        "disease"
+        "Member States",
+        "Albania",
+        "Andorra",
+        "Armenia",
+        "Austria",
+        "Azerbaijan",
+        "Belarus",
+        "Belgium",
+        "Bosnia and Herzegovina",
+        "Bulgaria",
+        "Croatia",
+        "Cyprus",
+        "Czechia",
+        "Denmark",
+        "Estonia",
+        "Finland",
+        "France",
+        "Georgia",
+        "Germany",
+        "Greece",
+        "Hungary",
+        "Iceland",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Kazakhstan",
+        "Kyrgyzstan",
+        "Latvia",
+        "Lithuania",
+        "Luxembourg",
+        "Malta",
+        "Monaco",
+        "Montenegro",
+        "Netherlands",
+        "North Macedonia",
+        "Norway",
+        "Poland",
+        "Portugal",
+        "Republic of Moldova",
+        "Romania",
+        "Russian Federation",
+        "San Marino",
+        "Serbia",
+        "Slovakia",
+        "Slovenia",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Tajikistan",
+        "Turkey",
+        "Turkmenistan",
+        "Ukraine",
+        "United Kingdom",
+        "Uzbekistan",
+        "WHO Regional Office for Europe",
+        "Tel.",
+        "Fax",
+        "E-mail"
       ],
-      "reason": "The document focuses on general guidance regarding screening programmes for various noncommunicable diseases, rather than prostate cancer specifically."
-    }
-  },
-  {
-    "file": "article_50(Management and_or treatment).pdf",
-    "summary": "## Summary of National Clinical Guideline on Prostate Cancer\n\n**Main Topic:** Diagnosis, staging, and treatment of prostate cancer in Ireland.\n\n**Research Methodology:** The guideline was developed through collaboration between the National Cancer Control Programme (NCCP), clinicians, librarians, and stakeholder groups.\n\n**Key Findings/Recommendations:**\n\n* **Early detection:** Screening with PSA and digital rectal examination is recommended for high-risk individuals.\n* **Diagnosis:** Imaging modalities like MRI and PSA levels are crucial for accurate diagnosis.\n* **Staging:** Gleason score and stage T are important factors in determining treatment options.\n* **Treatment:** Options include active surveillance, surgery, radiation therapy, hormone therapy, and combination approaches.\n* **Individualized care:** Treatment should be tailored to each patient's risk of recurrence, potential side effects, and preferences.\n\n**Key Terminology:**\n\n* **PSA:** Prostate-specific antigen, a blood test used for prostate cancer screening.\n* **MRI:** Magnetic resonance imaging, used for detecting prostate cancer and assessing its extent.\n* **Gleason score:** A measure of the aggressiveness of prostate cancer.\n* **Stage T:** The extent of cancer spread in the prostate.\n* **Active surveillance:** Close monitoring of cancer without immediate treatment.\n\n**Additional Information:**\n\n* The guideline is intended for the multidisciplinary clinical team caring for patients with prostate cancer.\n* The guideline is based on evidence-based clinical knowledge and is regularly reviewed and updated.\n* The NCCP is responsible for implementing the recommendations of the guideline.",
-    "classification": {
-      "classification": "research study objectives",
-      "keywords": [
-        "PSA",
-        "MRI",
-        "Gleason score",
-        "Stage T",
-        "Active surveillance",
-        "Surgery",
-        "Radiation therapy",
-        "Hormone therapy"
-      ],
-      "reason": "The guideline focuses on diagnosing, staging, and treating prostate cancer, aligning with the study objective of providing evidence-based recommendations for clinical care. However, it does not address decision aid, guidelines, or programs related to prostate cancer, which aligns with the exclusion criterion."
-    }
-  },
-  {
-    "file": "article_52(Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer).pdf",
-    "summary": "## Summary of the Research Paper:\n\n**Background:**\n\n* Prostate cancer (PC) is the most common cancer among men, but PSA testing has limitations in early detection and can lead to unnecessary interventions.\n* Genetic markers have been identified as potential risk predictors for PC.\n\n**Objective:**\n\n* To assess the impact of a genetic PC risk assessment on patients' perceived risk of PC and intentions to repeat PSA testing.\n\n**Methods:**\n\n* Study conducted in 73 general practices in Denmark.\n* Patients receiving a PSA test were eligible for inclusion, excluding those with specific exclusion criteria.\n* A genetic risk assessment was performed based on genotyping of 33 risk loci/SNPs.\n* Participants completed a questionnaire about their awareness of the test, perceived risk of PC, and intentions for future PSA testing.\n\n**Results:**\n\n* Despite low awareness of the test, patients with a high genetic risk for PC reported:\n    * Increased awareness of their PC risk.\n    * Greater intention to repeat PSA testing.\n\n**Conclusion:**\n\n* Genetic PC risk assessment can be used to optimize PSA testing in general practice by:\n    * Reducing unnecessary testing in low-risk individuals.\n    * Identifying high-risk patients who should undergo targeted screening.\n\n**Key Findings:**\n\n* Genetic risk assessment can enhance patient awareness of their individual PC risk.\n* Awareness of genetic risk can influence patients' decisions regarding PSA testing.\n* This intervention could potentially improve the effectiveness and efficiency of prostate cancer screening.",
-    "classification": {
-      "classification": "Not research study objectives",
-      "keywords": [
-        "PSA testing",
-        "Genetic risk assessment",
-        "Patient awareness",
-        "Screening",
-        "Efficiency"
-      ],
-      "reason": "The document focuses on assessing the impact of a genetic PC risk assessment on patients' awareness of their PC risk and intentions to repeat PSA testing, which is not explicitly related to the study objective of prostate cancer-related research."
-    }
-  },
-  {
-    "file": "article_53(For public consumption, patient info_guide, trial information).pdf",
-    "summary": "**Summary:**\n\nThe provided text discusses the increasing incidence of prostate cancer among younger men and highlights the importance of early detection and diagnosis.\n\n**Key Points:**\n\n* Prostate cancer is a malignant tumor that originates in the prostate gland.\n* The incidence of prostate cancer has increased steadily in men between the ages of 15 and 40 years.\n* Early detection through Prostate-specific Antigen (PSA) screening is crucial for improving survival rates.\n* Symptoms such as pain or burning during urination, difficulty urinating, and an enlarged prostate warrant medical attention.\n\n**Main Concerns:**\n\n* The rising incidence of prostate cancer among younger men.\n* The need for early detection and diagnosis.\n* The potential causes of prostate cancer in younger individuals.\n\n**Recommendations:**\n\n* Regular PSA screening is essential for early detection.\n* Seek medical attention if symptoms such as pain or difficulty urinating are present.\n* Consult a healthcare professional for further evaluation if prostate problems are suspected.\n\n**Additional Information:**\n\n* The text includes data on the incidence and survival rates of prostate cancer among different age groups.\n* It discusses the differential diagnosis of prostate problems, including prostatitis and prostate cancer.\n\n**Implications:**\n\n* The increasing incidence of prostate cancer among younger men highlights the need for public awareness and accessible screening programs.\n* Early detection and treatment can significantly improve the prognosis and quality of life for patients.\n* Research is ongoing to better understand the causes and risk factors associated with prostate cancer in younger individuals.",
-    "classification": {
-      "classification": "Not research study objectives",
-      "keywords": [
-        "increasing incidence",
-        "early detection",
-        "diagnosis",
-        "PSA screening",
-        "symptoms",
-        "differential diagnosis"
-      ],
-      "reason": "The document focuses on clinical aspects of prostate cancer, discussing its incidence, diagnosis, and management, rather than research study objectives related to prostate cancer."
-    }
-  },
-  {
-    "file": "article_55(News, lecturer note, thesis, draft, proposal, module, stimulation, presscast, fact sheet, opinion, editorial).pdf",
-    "summary": "## Summary of Prostate Cancer Research Funding in the EU4Health Programme\n\n**Main Topic:** The EU4Health Programme allocates funding for research and initiatives to address various health challenges, including prostate cancer.\n\n**Research Methodology:** Not explicitly mentioned in the provided text.\n\n**Key Findings/Recommendations:**\n\n- The programme supports research on health promotion, disease prevention, and cancer, including prostate cancer.\n- Actions with a cost of EUR 20,000,000 or more can be funded under the programme.\n- Specific funding is allocated for research on:\n    - Health promotion and prevention of cancer and related risk factors.\n    - Quality of life of cancer survivors.\n    - Evaluating Europe's beating cancer plan.\n\n**Key Terminology:**\n\n- **EU4Health Programme:** The European Union's action plan for health.\n- **Cancer:** A major focus of the programme, including prostate cancer.\n- **Crisis Preparedness (CP):** Research related to preparing for and managing health crises.\n- **Digital Transformation of Healthcare:** Initiatives to modernize and improve healthcare through digital technologies.\n\n**Additional Notes:**\n\n- The provided text does not contain specific details regarding the amount of funding allocated for prostate cancer research within the EU4Health Programme.\n- The draft work programme for 2022 outlines the programme's priorities and funding areas.",
-    "classification": {
-      "classification": "Research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer",
-      "keywords": [
-        "EU4Health Programme",
-        "cancer",
-        "prostate cancer"
-      ],
-      "reason": "The document discusses the EU4Health Programme's funding for research and initiatives related to various health challenges, including cancer, but does not specifically focus on prostate cancer research, decision aid, or guidelines related to prostate cancer."
+      "reason": "The document primarily functions as a list of WHO Member States, contact information for the WHO Regional Office for Europe, and associated contact details. It provides a directory-like function, detailing participating nations and relevant contact points. This format does not offer substantive analysis, research findings, or original content fitting for inclusion. It's essentially a compiled listing rather than a report or study."
     }
   },
   {
     "file": "article_81(Not by country health authorities or medical organisation).pdf",
-    "summary": "## Summary of the provided text:\n\n**Baseline PSA:**\n\n* The EAU recommends measuring a baseline PSA at 40-45 years of age.\n* The AUA seems to disregard the evidence that a baseline PSA can predict future prostate cancer risk.\n\n**Screening intervals:**\n\n* No specific screening interval has been proven effective.\n* The EAU suggests adapting the interval to the baseline PSA:\n    * 2-4 years for PSA > 1.0 mg/l\n    * Up to 8 years for PSA \u2264 1.0 mg/l\n* This approach aims to reduce potential harms by targeting high-risk individuals.\n\n**Elderly population:**\n\n* Limited evidence exists regarding the effectiveness of PSA screening in elderly men.\n* The EAU recommends screening for men with a life expectancy of \u2265 10 years.\n\n**Key findings:**\n\n* Regular PSA testing can significantly reduce prostate cancer mortality among men aged 55-69 years.\n* Screening intervals can be individualized based on PSA levels.\n* The benefits of screening in elderly men are unclear.\n\n**Recommendations:**\n\n* Men should discuss the risks and benefits of PSA screening with their healthcare providers to determine an appropriate screening schedule.\n* The elderly should consult with their doctors to assess the need for prostate cancer screening based on individual health conditions.",
     "classification": {
-      "classification": "Primary study or not systematic review",
+      "classification": "Promotional Content",
       "keywords": [
-        "Baseline PSA",
-        "Screening intervals",
-        "Elderly population",
-        "Key findings",
-        "Recommendations"
+        "subscribe",
+        "eNewsletter",
+        "FREE",
+        "congresses",
+        "ASCO",
+        "ECCO",
+        "ESMO",
+        "www.congressupdateoncology.be",
+        "project@ariez.nl",
+        "clinical practice",
+        "oncologists",
+        "Radiotherapy",
+        "Belgium",
+        "Luxembourg",
+        "Independent",
+        "reliable",
+        "content",
+        "daily",
+        "highlights",
+        "CongressUpdate Oncology",
+        "Belgian Journal of Medical Oncology"
       ],
-      "reason": "The document is a primary study that does not present a systematic review of existing literature on prostate cancer screening, which is a requirement for inclusion in the study."
+      "reason": "The document primarily functions as promotional material for an eNewsletter ('CongressUpdate Oncology') and a journal ('Belgian Journal of Medical Oncology'). It actively encourages subscriptions and highlights the benefits of subscribing, such as access to congress highlights and content selected by oncologists. The text is designed to attract readers and market these offerings, rather than presenting original research or analysis. It heavily emphasizes commercial aspects and calls to action, which are characteristic of promotional content."
+    }
+  },
+  {
+    "file": "article_377(Conference abstract).pdf",
+    "classification": {
+      "classification": "Focuses on assay performance/comparison rather than clinical outcomes/patient management",
+      "keywords": [
+        "assay",
+        "reactivity",
+        "reference preparation",
+        "automated assays",
+        "inter-assay variability",
+        "clinical impact",
+        "performance",
+        "comparison",
+        "reactivity toward",
+        "reference preparation"
+      ],
+      "reason": "Many entries (e.g., Kort et al., 2006; Murthy et al., 2016; Aoki et al., 2001; Lepor et al., 1996; Kort et al. 2006; Murthy et al., 2016; Kort et al. 2006) predominantly focus on the performance characteristics and comparability of different Prostate-Specific Antigen (PSA) assays. They delve into aspects like assay reactivity towards reference preparations, automated assay performance comparisons, and inter-assay variability. These studies assess how different assays measure PSA and analyze discrepancies, rather than examining the clinical impact of PSA measurements on patient management or clinical outcomes. Therefore, these articles do not align with the goal of extracting information about patient care or clinical consequences related to PSA screening or monitoring."
+    }
+  },
+  {
+    "file": "article_53(For public consumption, patient info_guide, trial information).pdf",
+    "classification": {
+      "classification": "Primarily Promotional/Commercial",
+      "keywords": [
+        "transurethral resection of prostate (TURP) cost",
+        "edtreatmentindia.com",
+        "transperineal prostate biopsy (santishealth.org)",
+        "clinical utility of the Prostate Health Index (PHI)",
+        "ucdmc.ucdavis.edu/cancer/cancer_types/prostate.html",
+        "Web MD. Prostate Cancer ",
+        "University of Northern Colorado",
+        "steroids",
+        "family history and probability of prostate ca ncer",
+        "Prostate Health Index (PHI)",
+        "clinical utility",
+        "cost",
+        "treatment",
+        "surgery"
+      ],
+      "reason": "The document contains numerous links to external websites that appear to be promotional or commercial in nature. These include a website advertising prostate surgery costs ('edtreatmentindia.com'), a cancer center webpage ('ucdmc.ucdavis.edu'), a health information website ('WebMD'), and a page discussing steroid use ('University of Northern Colorado'). Furthermore, several links provide details about specific tests and treatments offered by medical facilities. The frequent inclusion of links promoting specific medical procedures and commercial entities strongly suggests the document's purpose is promotional rather than solely informational or research-focused."
+    }
+  },
+  {
+    "file": "article_412(Attitude, belief, experience, behaviour, knowledge).pdf",
+    "classification": {
+      "classification": "Publisher\u2019s Note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+      "keywords": [
+        "jurisdictional claims",
+        "institutional affiliations",
+        "remains neutral"
+      ],
+      "reason": "The excerpt is a publisher's note explicitly stating neutrality regarding jurisdictional claims and institutional affiliations. This is a disclaimer and does not contain original research or analysis related to the topic of prostate cancer awareness. It is a standard statement appended to publications and does not contribute to the body of evidence being synthesized. Therefore, it is excluded as it is not relevant to the systematic review's scope."
+    }
+  },
+  {
+    "file": "article_50(Management and_or treatment).pdf",
+    "classification": {
+      "classification": "Contains Lists and Definitions",
+      "keywords": [
+        "list",
+        "of",
+        "key",
+        "terms",
+        "from",
+        "the",
+        "document",
+        "that",
+        "justify",
+        "exclusion",
+        "abbreviations",
+        "glossary",
+        "definitions",
+        "systematic review",
+        "meta-analysis",
+        "isotope bone scan",
+        "radical retropubic prostatectomy",
+        "radical transperineal prostatectomy",
+        "randomised trial",
+        "internal validity",
+        "external validity",
+        "systematic review",
+        "meta-analysis"
+      ],
+      "reason": "The document heavily features lists of terms and definitions relevant to prostate cancer diagnosis and treatment. Sections like the glossary defining terms such as 'isotope bone scan', 'radical retropubic prostatectomy', 'randomized trial', and describing 'internal validity' and 'external validity' primarily serve to provide a glossary rather than present original research, clinical guidance, or patient information. The inclusion of descriptions and definitions of methodologies like 'systematic review' and 'meta-analysis' further emphasizes its nature as a reference guide rather than a standalone guideline or report. The nature of a glossary makes it unsuitable for the intended purpose."
+    }
+  },
+  {
+    "file": "article_55(News, lecturer note, thesis, draft, proposal, module, stimulation, presscast, fact sheet, opinion, editorial).pdf",
+    "classification": {
+      "classification": "International Organization",
+      "keywords": [
+        "International organisation",
+        "WHO Regional Office for Europe",
+        "contribution agreement",
+        "SANTE",
+        "decentralised agency",
+        "European Medicines Agency",
+        "implemented by"
+      ],
+      "reason": "The document explicitly states the procedure type as 'Indirect management - contribution agreement' and identifies 'International organisation (WHO Regional Office for Europe)' and a 'Decentralised Agency (European Medicines Agency)' as the entities being targeted. The 'Type of applicants targeted' section clearly designates 'International organisation' and 'Decentralised Agency', aligning with the exclusion reason of targeting international organizations."
+    }
+  },
+  {
+    "file": "article_121(Primary study or not systematic review).pdf",
+    "classification": {
+      "classification": "Focuses on barriers to screening rather than screening outcomes or effectiveness",
+      "keywords": [
+        "Barriers",
+        "Facilitators",
+        "African American men",
+        "Filipino men",
+        "screening in African American men",
+        "Barriers to prostate cancer screening"
+      ],
+      "reason": "The document primarily investigates factors hindering prostate cancer screening among specific populations (African American and Filipino men) and describes the barriers and facilitators involved. This focuses on the *process* of screening rather than the *outcomes* or *effectiveness* of screening itself. The emphasis is on understanding why screening rates are lower in these groups, rather than evaluating the impact of screening on cancer detection or patient survival. Articles focusing on the efficacy of screening protocols, cancer detection rates after screening, or survival benefits would be more relevant, while this document's focus on barriers excludes it."
+    }
+  },
+  {
+    "file": "article_383(Cost effectiveness).pdf",
+    "classification": {
+      "classification": "Contains promotional or marketing content",
+      "keywords": [
+        "Comparative modelling",
+        "Cancer Intervention and Surveillance Modeling Network",
+        "feasibility study",
+        "risk-management behavior",
+        "BARCODE1 Pilot",
+        "screening"
+      ],
+      "reason": "Several entries in the reference list appear to describe modeling networks or pilot studies focused on cancer screening and risk stratification. While these are scientifically relevant, the descriptions suggest a focus on promoting or evaluating particular intervention strategies and potentially related technologies or programs (e.g., \u2018BARCODE1 Pilot\u2019). The inclusion of 'Cancer Intervention and Surveillance Modeling Network' and the framing of studies as \u2018feasibility studies\u2019 and evaluations of \u2018risk-management behavior\u2019 indicate a promotional or marketing aspect tied to specific interventions or programs, rather than purely objective research findings. The focus on screening and pilot programs leans towards showcasing and advocating for particular approaches rather than presenting foundational scientific data."
+    }
+  },
+  {
+    "file": "article_52(Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer).pdf",
+    "classification": {
+      "classification": "Contains statistical analysis code and technical implementation details",
+      "keywords": [
+        "R Core Team",
+        "R: a language and environment for statistical computing",
+        "Therneau TM, Grambsch PM",
+        "Modeling survival data",
+        "R Foundation for Statistical Computing",
+        "R",
+        "statistical computing",
+        "survival data",
+        "statistical analysis"
+      ],
+      "reason": "The document explicitly references and describes the use of statistical analysis software (R) and provides details about statistical modeling techniques. References to 'R Core Team', 'R: a language and environment for statistical computing', and 'Modeling survival data' indicate the document's focus on the technical aspects of data analysis and implementation rather than clinical findings or patient experiences. This leans towards a technical report or methodological guide rather than a study suitable for the stated research focus."
+    }
+  },
+  {
+    "file": "article_142(Others).pdf",
+    "classification": {
+      "classification": "Others",
+      "keywords": [
+        "LifeLabs",
+        "Patient Service Centre",
+        "mobile lab service",
+        "test requisition",
+        "provincial health plan",
+        "Canada",
+        "Canadian",
+        "Statistics Canada",
+        "Prostate Cancer Canada",
+        "Canadian Cancer Society"
+      ],
+      "reason": "The exclusion reason 'Others' likely signifies that the document doesn's fall cleanly into any defined category. In this case, the document appears to be promotional or informational material from a specific laboratory (LifeLabs) detailing a diagnostic test (PSA test) and its availability in Canada. It isn's a research article, clinical trial, or systematic review, but rather a resource explaining the test and outlining how to access it. The document prominently features a specific company (LifeLabs) and provincial/national healthcare systems, indicating its purpose is likely to inform patients about a commercial service rather than providing scientific or clinical information."
     }
   }
 ]
