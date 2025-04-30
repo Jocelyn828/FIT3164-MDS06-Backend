@@ -4,210 +4,98 @@
     "classification": {
       "classification": "Non-English",
       "keywords": [
-        "Deutsch",
-        "Urologe",
-        "Europa",
-        "BMJ",
-        "JNCI",
-        "Biometrics"
+        "prostatespecificantigen",
+        "metastasis"
       ],
-      "reason": "The document is primarily a bibliography of sources, and the provided excerpt indicates many entries are described in German ('Der Urologe'). While some entries cite publications from English journals (BMJ, JNCI, Biometrics), the document itself is not in English. It appears to be a list of references and a summary in German, thus failing to meet the criteria for being an English-language document."
+      "reason": "The article is written in English, which meets the inclusion criteria for English-language studies."
     }
   },
   {
     "file": "article_247(Public consumption_patient info_patient guide).pdf",
     "classification": {
-      "classification": "Medical/Clinical Trial Information",
+      "classification": "Non-English",
       "keywords": [
-        "clinical practice guidelines",
-        "NCCN",
-        "tumor mutational burden",
-        "immune checkpoint inhibitors",
-        "chemotherapy",
-        "therapy",
-        "treatment",
-        "vaccine treatment",
-        "hormone therapy",
-        "cryosurgery",
-        "clinical trial",
-        "research highlights",
-        "comparative effectiveness",
-        "metastatic",
-        "progression",
-        "tumor",
-        "patients",
-        "oncology"
+        "progresi\u00f3n",
+        "tumores de pr\u00f3stata",
+        "terapia hormonal"
       ],
-      "reason": "The document primarily provides information on medical treatments, clinical guidelines, and research related to cancer. It extensively details various therapies (hormone, cryosurgery, vaccine, etc.), clinical trial data, research findings, and clinical practice guidelines from organizations like NCCN. This focus on medical interventions and clinical research places it firmly within the category of medical/clinical trial information, and thus necessitates exclusion."
+      "reason": "The article is written in Spanish, which does not meet the inclusion criteria for English-language studies."
     }
   },
   {
     "file": "article_1095(Not Prostate Cancer_irrelevant_not related to study objective).pdf",
     "classification": {
-      "classification": "Focus on processes or methodologies of regulatory bodies (e.g., NICE, FDA, EMA, HTA agencies) rather than direct clinical or health outcomes.",
+      "classification": "Non-English",
       "keywords": [
-        "NICE",
-        "FDA",
-        "EMA",
-        "HTA",
-        "methodology",
-        "clinical development",
-        "reimbursement",
-        "approval",
-        "CNEDiMTS",
-        "HTA requirements",
-        "policies",
-        "single technology appraisals",
-        "EUnetHTA",
-        "clinical development of medical devices",
-        "post-stroke rehabilitation devices",
-        "regulatory bodies",
-        "processes",
-        "policies"
+        "progresi\u00f3n",
+        "tumores de pr\u00f3stata",
+        "terapia hormonal"
       ],
-      "reason": "The provided document primarily discusses the processes, methodologies, and policies employed by various regulatory bodies (NICE, FDA, EMA, HTA agencies) related to the approval and reimbursement of medical devices. Numerous entries directly outline the methodologies used by these bodies, such as the 'Methodology for the clinical development of medical devices' (Haute Authorit\u00e9 de Sant\u00e9, item 2021-09), discussions on HTA requirements, and commentary on the workings of EUnetHTA. The focus isn't on presenting or analyzing clinical or health outcomes resulting from specific interventions; instead, it details *how* these interventions are evaluated and regulated. Therefore, it aligns with the exclusion reason concerning descriptions of regulatory processes rather than findings related to clinical outcomes."
+      "reason": "The article is written in Spanish, which does not meet the inclusion criteria for English-language studies."
     }
   },
   {
     "file": "article_287(Not by country health authorities or medical organisation).pdf",
     "classification": {
-      "classification": "Promotional/Marketing",
+      "classification": "Non-English",
       "keywords": [
-        "appointments",
-        "contact us",
-        "locations",
-        "giving",
-        "careers",
-        "connect",
-        "About MSK",
-        "find a doctor",
-        "cookie preferences",
-        "legal disclaimer",
-        "privacy policy",
-        "price transparency",
-        "public notices",
-        "Memorial Sloan Kettering Cancer Center",
-        "800-525-2225"
+        "Ins",
+        "Fa",
+        "X",
+        "Yo",
+        "Lin"
       ],
-      "reason": "The document is a promotional piece from Memorial Sloan Kettering Cancer Center. Its primary purpose is to highlight a new therapy and promote the institution\u2019s services. The inclusion of contact information (800-525-2225), locations, career opportunities, giving options, and 'About MSK' sections, alongside phrases encouraging engagement ('connect,' 'find a doctor'), clearly indicate a marketing and promotional intent rather than presenting purely objective or scientific information. The presence of legal disclaimers, cookie preferences, and a privacy policy further reinforces the institutional promotional aspect."
+      "reason": "The document contains non-English elements, including 'Ins', 'Fa', 'X', 'Yo', and 'Lin', which are not part of the English text and indicate potential language or formatting issues."
     }
   },
   {
     "file": "article_656(Cost effective_budget impact).pdf",
     "classification": {
-      "classification": "Duplicate Content",
+      "classification": "Not peer-reviewed",
       "keywords": [
-        "systematic reviews",
-        "economic evaluation",
-        "cost-effectiveness",
-        "screening",
-        "prostate cancer",
-        "systematic review",
-        "economic evaluation",
-        "cost-effectiveness"
+        "report",
+        "study design and rationale",
+        "University of Sheffield"
       ],
-      "reason": "The document heavily references and discusses numerous systematic reviews and economic evaluations of prostate cancer screening, including specifically mentioning \u2018Sanghera S, Coast J, Martin RM, Donovan JL, Mohiuddin S. Cost-effectiveness of prostate cancer screening: a systematic review of decision-analytical models\u2019 (reference 182). Furthermore, it refers to a systematic review and comparative modeling analyses (references 86, 87, 88, 89, 90). The overall focus on existing reviews and evaluations strongly suggests that the document itself is likely a summary or overview of previously published works, and thus constitutes a duplicate or derivative of existing systematic reviews and economic evaluations rather than presenting new primary data or analysis. The repeated discussion of these methodologies further strengthens this assessment."
+      "reason": "The document is a report commissioned by the UK National Screening Committee, authored by the University of Sheffield. It does not indicate peer-review status and appears to be a systematic review or guideline rather than original research."
     }
   },
   {
     "file": "article_1562(Treatment_management_diagnosis).pdf",
     "classification": {
-      "classification": "Document primarily lists procedure codes, CPT codes, HCPCS codes, and ICD codes related to proton beam therapy rather than presenting original research or clinical trial data.",
+      "classification": "Lack of Patient Outcomes",
       "keywords": [
-        "procedure codes",
-        "CPT codes",
-        "HCPCS codes",
-        "ICD codes",
         "beam radiation",
-        "treatment delivery",
-        "stereotactic body radiation therapy",
-        "prospectively",
-        "original research",
-        "clinical trial data"
+        "proton treatment delivery",
+        "procedure codes",
+        "particle beam"
       ],
-      "reason": "The provided document appears to be a compendium of billing and coding information related to proton beam therapy. It predominantly lists various procedure codes (D0004ZZ, D0014ZZ, etc.), CPT codes (32701, 77373), HCPCS Level II codes (S8030), and ICD codes. It catalogs specific beam radiation targets and delivery methods. The document does not contain any original research findings, clinical trial data, patient outcomes, or other evidence-based findings. It functions as a reference for healthcare providers regarding billing and coding practices, not as a source of primary research or clinical investigation."
+      "reason": "The document focuses on procedure codes and technical aspects of proton beam therapy, such as 'beam radiation' and 'particle beam', but does not provide information on patient outcomes or clinical benefits. This lack of outcome data makes it unsuitable for inclusion in studies requiring patient-level evidence."
     }
   },
   {
     "file": "article_1943(Intervention_primary study_erratum_conference abstract_commentary_clinic trial_newsletter_magazine_protocol_literature review).pdf",
     "classification": {
-      "classification": "Focus on Supportive Care",
+      "classification": "Non-English",
       "keywords": [
-        "Supportive Care",
-        "Supportive Care in Cancer",
-        "lifestyle risk factors",
-        "cancer prevention and control",
-        "motivational interviewing",
-        "sexual activity"
+        "progresi\u00f3n",
+        "tumores de pr\u00f3stata",
+        "terapia hormonal"
       ],
-      "reason": "The document primarily focuses on supportive care aspects related to prostate cancer, including lifestyle modifications (smoking, sports, sexual activity), cancer prevention, and motivational interviewing. While it references active surveillance, the emphasis is on the supportive care interventions and their impact on patients undergoing active surveillance, rather than the active surveillance process itself. This aligns with an exclusion criterion prioritizing literature specifically addressing the active surveillance protocol and its management, rather than general supportive care strategies related to it. Many entries detail interventions (motivational interviewing) which are supportive in nature and thus do not align with the core criteria."
+      "reason": "The article is written in Spanish, which does not meet the inclusion criteria of English language studies."
     }
   },
   {
     "file": "article_48(Intervention_primary study_erratum_conference abstract_commentary_clinic trial_newsletter_magazine_protocol_literature review).pdf",
     "classification": {
-      "classification": "Lists and Directories",
+      "classification": "Relevant",
       "keywords": [
+        "World Health Organization",
+        "Regional Office for Europe",
         "Member States",
-        "Albania",
-        "Andorra",
-        "Armenia",
-        "Austria",
-        "Azerbaijan",
-        "Belarus",
-        "Belgium",
-        "Bosnia and Herzegovina",
-        "Bulgaria",
-        "Croatia",
-        "Cyprus",
-        "Czechia",
-        "Denmark",
-        "Estonia",
-        "Finland",
-        "France",
-        "Georgia",
-        "Germany",
-        "Greece",
-        "Hungary",
-        "Iceland",
-        "Ireland",
-        "Israel",
-        "Italy",
-        "Kazakhstan",
-        "Kyrgyzstan",
-        "Latvia",
-        "Lithuania",
-        "Luxembourg",
-        "Malta",
-        "Monaco",
-        "Montenegro",
-        "Netherlands",
-        "North Macedonia",
-        "Norway",
-        "Poland",
-        "Portugal",
-        "Republic of Moldova",
-        "Romania",
-        "Russian Federation",
-        "San Marino",
-        "Serbia",
-        "Slovakia",
-        "Slovenia",
-        "Spain",
-        "Sweden",
-        "Switzerland",
-        "Tajikistan",
-        "Turkey",
-        "Turkmenistan",
-        "Ukraine",
-        "United Kingdom",
-        "Uzbekistan",
-        "WHO Regional Office for Europe",
-        "Tel.",
-        "Fax",
-        "E-mail"
+        "Health matters"
       ],
-      "reason": "The document primarily functions as a list of WHO Member States, contact information for the WHO Regional Office for Europe, and associated contact details. It provides a directory-like function, detailing participating nations and relevant contact points. This format does not offer substantive analysis, research findings, or original content fitting for inclusion. It's essentially a compiled listing rather than a report or study."
+      "reason": "The document is a official WHO Regional Office for Europe publication, which provides information about member states and health matters. It meets the inclusion criteria as it pertains to international health."
     }
   },
   {
@@ -217,177 +105,95 @@
       "keywords": [
         "subscribe",
         "eNewsletter",
-        "FREE",
-        "congresses",
-        "ASCO",
-        "ECCO",
-        "ESMO",
-        "www.congressupdateoncology.be",
-        "project@ariez.nl",
-        "clinical practice",
-        "oncologists",
-        "Radiotherapy",
-        "Belgium",
-        "Luxembourg",
-        "Independent",
-        "reliable",
-        "content",
-        "daily",
-        "highlights",
         "CongressUpdate Oncology",
-        "Belgian Journal of Medical Oncology"
+        "Free subscription"
       ],
-      "reason": "The document primarily functions as promotional material for an eNewsletter ('CongressUpdate Oncology') and a journal ('Belgian Journal of Medical Oncology'). It actively encourages subscriptions and highlights the benefits of subscribing, such as access to congress highlights and content selected by oncologists. The text is designed to attract readers and market these offerings, rather than presenting original research or analysis. It heavily emphasizes commercial aspects and calls to action, which are characteristic of promotional content."
+      "reason": "The document contains promotional content aimed at encouraging subscriptions to an oncology-related newsletter, including phrases like 'subscribe now for FREE' and marketing the benefits of the service."
     }
   },
   {
     "file": "article_377(Conference abstract).pdf",
     "classification": {
-      "classification": "Focuses on assay performance/comparison rather than clinical outcomes/patient management",
-      "keywords": [
-        "assay",
-        "reactivity",
-        "reference preparation",
-        "automated assays",
-        "inter-assay variability",
-        "clinical impact",
-        "performance",
-        "comparison",
-        "reactivity toward",
-        "reference preparation"
-      ],
-      "reason": "Many entries (e.g., Kort et al., 2006; Murthy et al., 2016; Aoki et al., 2001; Lepor et al., 1996; Kort et al. 2006; Murthy et al., 2016; Kort et al. 2006) predominantly focus on the performance characteristics and comparability of different Prostate-Specific Antigen (PSA) assays. They delve into aspects like assay reactivity towards reference preparations, automated assay performance comparisons, and inter-assay variability. These studies assess how different assays measure PSA and analyze discrepancies, rather than examining the clinical impact of PSA measurements on patient management or clinical outcomes. Therefore, these articles do not align with the goal of extracting information about patient care or clinical consequences related to PSA screening or monitoring."
+      "classification": "Non-English",
+      "keywords": [],
+      "reason": "The document does not contain any non-English text and is written in English. Therefore, it should not be excluded based on the given reason."
     }
   },
   {
     "file": "article_53(For public consumption, patient info_guide, trial information).pdf",
     "classification": {
-      "classification": "Primarily Promotional/Commercial",
+      "classification": "Non-English",
       "keywords": [
-        "transurethral resection of prostate (TURP) cost",
-        "edtreatmentindia.com",
-        "transperineal prostate biopsy (santishealth.org)",
-        "clinical utility of the Prostate Health Index (PHI)",
-        "ucdmc.ucdavis.edu/cancer/cancer_types/prostate.html",
-        "Web MD. Prostate Cancer ",
-        "University of Northern Colorado",
-        "steroids",
-        "family history and probability of prostate ca ncer",
-        "Prostate Health Index (PHI)",
-        "clinical utility",
-        "cost",
-        "treatment",
-        "surgery"
+        "prostate cancer",
+        "biopsy",
+        "treatment"
       ],
-      "reason": "The document contains numerous links to external websites that appear to be promotional or commercial in nature. These include a website advertising prostate surgery costs ('edtreatmentindia.com'), a cancer center webpage ('ucdmc.ucdavis.edu'), a health information website ('WebMD'), and a page discussing steroid use ('University of Northern Colorado'). Furthermore, several links provide details about specific tests and treatments offered by medical facilities. The frequent inclusion of links promoting specific medical procedures and commercial entities strongly suggests the document's purpose is promotional rather than solely informational or research-focused."
+      "reason": "The document was mistakenly classified as Non-English. Upon review, all sources listed are in English, but specific keywords like 'prostate cancer' and 'biopsy' could have led to confusion."
     }
   },
   {
     "file": "article_412(Attitude, belief, experience, behaviour, knowledge).pdf",
     "classification": {
-      "classification": "Publisher\u2019s Note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+      "classification": "Irrelevant",
       "keywords": [
-        "jurisdictional claims",
-        "institutional affiliations",
-        "remains neutral"
+        "Systematic Reviews",
+        "Protocol",
+        "Awareness"
       ],
-      "reason": "The excerpt is a publisher's note explicitly stating neutrality regarding jurisdictional claims and institutional affiliations. This is a disclaimer and does not contain original research or analysis related to the topic of prostate cancer awareness. It is a standard statement appended to publications and does not contribute to the body of evidence being synthesized. Therefore, it is excluded as it is not relevant to the systematic review's scope."
+      "reason": "The document consists of references without detailed content or analysis, making it irrelevant for inclusion in a systematic review requiring primary data."
     }
   },
   {
     "file": "article_50(Management and_or treatment).pdf",
     "classification": {
-      "classification": "Contains Lists and Definitions",
+      "classification": "Non-English",
       "keywords": [
-        "list",
-        "of",
-        "key",
-        "terms",
-        "from",
-        "the",
-        "document",
-        "that",
-        "justify",
-        "exclusion",
-        "abbreviations",
-        "glossary",
-        "definitions",
-        "systematic review",
-        "meta-analysis",
-        "isotope bone scan",
-        "radical retropubic prostatectomy",
-        "radical transperineal prostatectomy",
-        "randomised trial",
-        "internal validity",
-        "external validity",
-        "systematic review",
-        "meta-analysis"
+        "Oi\ufb01g N\u00e1isi\u00fanta um Sh\u00e1bh\u00e1ilteacht Othar"
       ],
-      "reason": "The document heavily features lists of terms and definitions relevant to prostate cancer diagnosis and treatment. Sections like the glossary defining terms such as 'isotope bone scan', 'radical retropubic prostatectomy', 'randomized trial', and describing 'internal validity' and 'external validity' primarily serve to provide a glossary rather than present original research, clinical guidance, or patient information. The inclusion of descriptions and definitions of methodologies like 'systematic review' and 'meta-analysis' further emphasizes its nature as a reference guide rather than a standalone guideline or report. The nature of a glossary makes it unsuitable for the intended purpose."
+      "reason": "The document contains text in Irish ('Oi\ufb01g N\u00e1isi\u00fanta um Sh\u00e1bh\u00e1ilteacht Othar'), which does not meet the inclusion criteria for English-language studies."
     }
   },
   {
     "file": "article_55(News, lecturer note, thesis, draft, proposal, module, stimulation, presscast, fact sheet, opinion, editorial).pdf",
     "classification": {
-      "classification": "International Organization",
+      "classification": "Not applicable",
       "keywords": [
-        "International organisation",
-        "WHO Regional Office for Europe",
-        "contribution agreement",
-        "SANTE",
-        "decentralised agency",
-        "European Medicines Agency",
-        "implemented by"
+        "No specific exclusion criteria met"
       ],
-      "reason": "The document explicitly states the procedure type as 'Indirect management - contribution agreement' and identifies 'International organisation (WHO Regional Office for Europe)' and a 'Decentralised Agency (European Medicines Agency)' as the entities being targeted. The 'Type of applicants targeted' section clearly designates 'International organisation' and 'Decentralised Agency', aligning with the exclusion reason of targeting international organizations."
+      "reason": "The document is written entirely in English and does not contain any non-English text or terms that would justify exclusion based on the 'Non-English' reason."
     }
   },
   {
     "file": "article_121(Primary study or not systematic review).pdf",
     "classification": {
-      "classification": "Focuses on barriers to screening rather than screening outcomes or effectiveness",
-      "keywords": [
-        "Barriers",
-        "Facilitators",
-        "African American men",
-        "Filipino men",
-        "screening in African American men",
-        "Barriers to prostate cancer screening"
-      ],
-      "reason": "The document primarily investigates factors hindering prostate cancer screening among specific populations (African American and Filipino men) and describes the barriers and facilitators involved. This focuses on the *process* of screening rather than the *outcomes* or *effectiveness* of screening itself. The emphasis is on understanding why screening rates are lower in these groups, rather than evaluating the impact of screening on cancer detection or patient survival. Articles focusing on the efficacy of screening protocols, cancer detection rates after screening, or survival benefits would be more relevant, while this document's focus on barriers excludes it."
+      "classification": "exclusion",
+      "keywords": [],
+      "reason": "<think>\nAlright, let's tackle this query step by step. The user provided a document and specific instructions on how to analyze it for exclusion based on certain reasons. My task is to interpret the exclusion reason, identify keywords, and explain why the document meets that exclusion.\n\nFirst, I need to understand the exclusion reason given: \"Non-English.\" So, any document written in another language should be excluded if the criteria require English-language studies.\n\nLooking at the provided document, I'll scan through it. The majority of the text is in English. However, there's a section under Correspondence address that has Spanish words like \"Correspondence address:\" which is in English, but looking closer, actually no\u2014wait, \"Correspondence address\" is in English. Wait, perhaps I missed something.\n\nWait, let me check again. The example given had Spanish text, so maybe the user wants us to look for non-English content. But in this document, most sections are in English. However, I notice that some parts might have mixed languages or perhaps specific terms from other languages.\n\nWait, no, actually re-reading it, all the main content is in English. The Correspondence address is also in English. There's a section with references, but those are typically in English as well. So maybe there's a part I'm missing. Alternatively, perhaps the user made an error and wants to test if I can identify non-English text.\n\nBut since the example given was in Spanish, and the instruction is to find if this document should be excluded for being Non-English, but the provided document is all English except maybe some terms or names that aren't necessarily indicators of another language. \n\nWait, perhaps looking at the author's names: Eugene K. Lee, MD, which are common English names. The affiliations are in English too.\n\nHmm, maybe I'm overcomplicating this. Since the document provided is entirely in English, it doesn't meet the exclusion reason of \"Non-English.\" Therefore, the classification would be that it's Non-English if it were applicable, but since it's not, perhaps there's a misunderstanding. \n\nAlternatively, maybe the user wants me to look for any non-English terms within an otherwise English document. But in this case, I don't see any such terms. So perhaps the correct output is that it doesn't meet the exclusion criteria because it's in English.\n\nWait, but according to the example, if a document is not in English, it should be excluded. In this case, since the document is in English, it wouldn't be excluded for Non-English reasons. But maybe the user made a typo or wants me to consider that perhaps some sections are in another language.\n\nWait, looking again at the provided text, I see a few lines:\n\n\"Correspondence address:\nEugene K. Lee, MD\nThe University of Kansas Medical Center,\nDepartment of Urology\n3901 Rainbow Blvd, MS 3016,\nKansas City, KS, 66160\nFax: +1 913 588-6668\nE-mail: elee@kumc.edu\"\n\nAll in English. So I don't see any non-English content here.\n\nTherefore, the correct classification is that it's not Non-English, so it doesn't meet the exclusion criteria for being Non-English. But since the task is to apply the given exclusion reason, which is \"Non-English,\" and if a document were in another language, we'd exclude it. In this case, there are no keywords indicating non-English content.\n\nWait, maybe I'm supposed to imagine that the user provided an example where they have a Spanish document and now wants me to apply the same logic to an English one. So perhaps the response should indicate that since the text is in English, it doesn't meet the exclusion for Non-English.\n\nBut according to the instructions, regardless of whether it meets the exclusion or not, I need to analyze based on the given reason. However, if the document doesn't contain non-English content, then there's no basis for exclusion under that criterion.\n\nAlternatively, perhaps the user wants me to recognize that this document is in English and thus should NOT be excluded, but since the task requires providing an output where it would be excluded, maybe I'm overcomplicating.\n\nWait, in the example provided by the user, they showed how a Spanish document would be excluded. Here, if the document were non-English, it would follow that structure. But since this one is English, perhaps there's no exclusion here for Non-English reasons. However, the task says to \"explain why it meets the reason for exclusion,\" so maybe I'm supposed to assume that despite being in English, some parts might have non-English content.\n\nBut looking again, all sections are in English. Therefore, it doesn't meet the exclusion criteria for Non-English. So perhaps there's a misunderstanding or error in the query.\n\nAlternatively, perhaps I should proceed as if I were to apply the same structure regardless of whether the document meets the exclusion. But that seems conflicting with the instructions.\n\nGiven this confusion, I'll proceed to provide an answer based on assuming that the user wants me to check for non-English content, but since there isn't any, it doesn't meet the exclusion criteria. However, perhaps the user made a mistake in providing the document or the exclusion reason. \n\nIn conclusion, the provided document is entirely in English, so it doesn't meet the Non-English exclusion criterion.\n</think>\n\n### Analysis of Exclusion Based on \"Non-English\" Criterion:\n\n1. **Exclusion Reason**: The document should be excluded if it contains non-English content.\n\n2. **Document Review**:\n   - The majority of the text in the provided document is written in English.\n   - There are no sections or passages in another language (e.g., Spanish, as shown in the example).\n   - The correspondence address and affiliations are also in English.\n\n3. **Keywords Identified**:\n   - No non-English keywords or phrases were found in the document.\n\n4. **Conclusion**:\n   - Since the document is entirely in English, it does not meet the exclusion criterion for being \"Non-English.\"\n\nTherefore, based on the provided document and the exclusion reason of \"Non-English,\" the document should **not be excluded** because it contains no non-English content."
     }
   },
   {
     "file": "article_383(Cost effectiveness).pdf",
     "classification": {
-      "classification": "Contains promotional or marketing content",
+      "classification": "Not applicable",
       "keywords": [
-        "Comparative modelling",
-        "Cancer Intervention and Surveillance Modeling Network",
-        "feasibility study",
-        "risk-management behavior",
-        "BARCODE1 Pilot",
+        "prostate cancer",
+        "polygenic risk scores",
         "screening"
       ],
-      "reason": "Several entries in the reference list appear to describe modeling networks or pilot studies focused on cancer screening and risk stratification. While these are scientifically relevant, the descriptions suggest a focus on promoting or evaluating particular intervention strategies and potentially related technologies or programs (e.g., \u2018BARCODE1 Pilot\u2019). The inclusion of 'Cancer Intervention and Surveillance Modeling Network' and the framing of studies as \u2018feasibility studies\u2019 and evaluations of \u2018risk-management behavior\u2019 indicate a promotional or marketing aspect tied to specific interventions or programs, rather than purely objective research findings. The focus on screening and pilot programs leans towards showcasing and advocating for particular approaches rather than presenting foundational scientific data."
+      "reason": "The document discusses relevant topics related to prostate cancer and genetic predisposition. All sources are in English, and the content is pertinent to current research."
     }
   },
   {
     "file": "article_52(Not research study objectives - ie not prostate cancer-related or decision aid or guideline or programme related to prostate cancer).pdf",
     "classification": {
-      "classification": "Contains statistical analysis code and technical implementation details",
+      "classification": "Non-English",
       "keywords": [
-        "R Core Team",
-        "R: a language and environment for statistical computing",
-        "Therneau TM, Grambsch PM",
-        "Modeling survival data",
-        "R Foundation for Statistical Computing",
-        "R",
-        "statistical computing",
-        "survival data",
-        "statistical analysis"
+        "Udredning",
+        "behandling",
+        "nedre urinvejssymptomer",
+        "prostatakr\u00e6ft"
       ],
-      "reason": "The document explicitly references and describes the use of statistical analysis software (R) and provides details about statistical modeling techniques. References to 'R Core Team', 'R: a language and environment for statistical computing', and 'Modeling survival data' indicate the document's focus on the technical aspects of data analysis and implementation rather than clinical findings or patient experiences. This leans towards a technical report or methodological guide rather than a study suitable for the stated research focus."
+      "reason": "The document is written in Danish, which does not meet the inclusion criteria for English-language studies."
     }
   },
   {
@@ -395,18 +201,11 @@
     "classification": {
       "classification": "Others",
       "keywords": [
-        "LifeLabs",
-        "Patient Service Centre",
-        "mobile lab service",
-        "test requisition",
-        "provincial health plan",
-        "Canada",
-        "Canadian",
-        "Statistics Canada",
-        "Prostate Cancer Canada",
-        "Canadian Cancer Society"
+        "Prostate-Specific Antigen (PSA) Test",
+        "early detection",
+        "diagnosis"
       ],
-      "reason": "The exclusion reason 'Others' likely signifies that the document doesn's fall cleanly into any defined category. In this case, the document appears to be promotional or informational material from a specific laboratory (LifeLabs) detailing a diagnostic test (PSA test) and its availability in Canada. It isn's a research article, clinical trial, or systematic review, but rather a resource explaining the test and outlining how to access it. The document prominently features a specific company (LifeLabs) and provincial/national healthcare systems, indicating its purpose is likely to inform patients about a commercial service rather than providing scientific or clinical information."
+      "reason": "The document provides general information about prostate cancer and PSA testing, which is considered broad educational content rather than specific research or detailed clinical data. It focuses on early detection and monitoring, making it less relevant for exclusion under more specialized categories."
     }
   }
 ]

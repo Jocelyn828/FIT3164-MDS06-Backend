@@ -336,7 +336,7 @@ class LocalPDFAnalyzer:
 
 
 if __name__ == "__main__":
-    analyzer = LocalPDFAnalyzer(model="gemma3:12b")
+    analyzer = LocalPDFAnalyzer(model="deepseek-r1:14b")
     
     L1_exclusion_folder ="./L1_exclusion_pdfs"
     L2_exclusion_folder ="./L2_exclusion_pdfs"
@@ -360,12 +360,11 @@ if __name__ == "__main__":
     print("\nAnalysis Complete!")
     print(f"Processed {len(results['exclusion_results'])} exclusion documents")
     print(f"Processed {len(results['inclusion_results'])} inclusion documents")
-    # print(results)
+
     # Print pattern summary if available
     if results['patterns'] and 'exclusion_patterns' in results['patterns'] and 'inclusion_patterns' in results['patterns']:
         print("\nKey Exclusion Patterns:")
         for pattern in results['patterns'].get('exclusion_patterns', [])[:5]:
-            # print(f"- {pattern['pattern']}: {pattern['description']}")
             print(f"-  Pattern: {pattern['pattern']}")
             print(f"-  Example keywords: {', '.join(pattern['keywords'][:5])}")
         
@@ -373,7 +372,5 @@ if __name__ == "__main__":
         for pattern in results['patterns'].get('inclusion_patterns', [])[:5]:
             print(f"-  Pattern: {pattern['pattern']}")
             print(f"-  Example keywords: {', '.join(pattern['keywords'][:5])}")
-            # print(f"- {pattern['pattern']}: {pattern['description']}")
-            # print(f"  Example keywords: {', '.join(pattern['keywords'][:5])}")
     
     print("\nDetailed results saved to the 'results' directory")

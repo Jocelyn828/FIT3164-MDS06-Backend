@@ -1,69 +1,46 @@
 {
   "exclusion_patterns": [
     {
-      "pattern": "Focus on quantitative modeling and decision support without direct clinical guidelines or patient outcomes.",
+      "pattern": "Non-English Language",
       "keywords": [
-        "nomogram",
-        "risk assessment",
-        "clinical markers",
-        "fuzzy logic",
-        "neuro-fuzzy",
-        "optimization",
-        "survival analysis",
-        "cost analysis"
+        "Chinese",
+        "French"
       ],
-      "evidence": "Article 0 highlights a compilation of references focused on modeling approaches (nomograms, fuzzy logic) and doesn't directly address patient outcomes or clinical guidelines. The emphasis is on tools rather than practical application or evaluation of screening effectiveness."
+      "evidence": "Documents excluded because they were written in languages other than English, which makes them inaccessible for analysis."
+    },
+    {
+      "pattern": "Irrelevant Content",
+      "keywords": [
+        "general AI applications",
+        "unrelated medical field"
+      ],
+      "evidence": "Documents excluded as they do not pertain to prostate cancer detection or related topics. For example, one document focused on general AI applications in healthcare rather than specific prostate cancer detection methods."
     }
   ],
   "inclusion_patterns": [
     {
-      "pattern": "Direct relevance to clinical guidelines and recommendations for PSA testing and management.",
+      "pattern": "PSA Testing Focus",
       "keywords": [
-        "PSA",
-        "screening",
-        "referral thresholds",
-        "life expectancy",
-        "management guidelines",
-        "DRE",
-        "baseline PSA"
+        "prostate-specific antigen (PSA)",
+        "screening guidelines"
       ],
-      "evidence": "Articles 9 and others explicitly provide guidelines for PSA testing, referral criteria, and considerations for different patient populations, demonstrating direct clinical relevance."
+      "evidence": "Included documents often focus on PSA testing as a key method for prostate cancer detection. For example, one document evaluates the use of serum prostate-specific antigen isoform [-2]proPSA and the Prostate Health Index (PHI) in detecting prostate cancer."
     },
     {
-      "pattern": "Focus on risk assessment and impact on patient outcomes in prostate cancer screening.",
+      "pattern": "Early Detection and Risk Factors",
       "keywords": [
-        "risk assessment",
-        "survival",
-        "incidence",
-        "HOXB13",
-        "androgen receptor inhibitors",
-        "comorbidity",
-        "life expectancy"
+        "risk factors",
+        "genetic variants"
       ],
-      "evidence": "Articles 10 and others emphasize the use of risk calculators, evaluation of screening impact on survival and incidence, and consideration of factors like comorbidity and life expectancy, all indicative of a focus on patient outcomes."
+      "evidence": "Included documents frequently discuss risk factors, genetic predispositions, and early detection methods. For instance, one document compiles studies on various aspects of prostate cancer, including genetic risk factors such as HOXB13 mutations."
     },
     {
-      "pattern": "Focus on interpreting and applying research findings related to prostate cancer detection and diagnosis.",
+      "pattern": "Machine Learning in Prognosis",
       "keywords": [
-        "screening",
-        "risk assessment",
-        "PSA",
-        "clinical markers",
-        "survival analysis"
+        "machine learning",
+        "support vector machines"
       ],
-      "evidence": "Many articles directly address the interpretation and implementation of research findings, particularly related to PSA testing, risk assessment tools, and survival analysis, thus being relevant to evidence-based practice."
-    },
-    {
-      "pattern": "Addressing the complexities of early detection and management strategies.",
-      "keywords": [
-        "early detection",
-        "screening",
-        "risk assessment",
-        "management",
-        "clinical markers",
-        "nomogram"
-      ],
-      "evidence": "Several documents tackle the nuances of early-stage prostate cancer, including screening strategies, risk assessment, and clinical markers."
+      "evidence": "Some included documents explore the application of machine learning techniques in predicting biochemical recurrence and improving prognostic decision making. For example, one study evaluates the use of support vector machines (SVM) for this purpose."
     }
   ]
 }

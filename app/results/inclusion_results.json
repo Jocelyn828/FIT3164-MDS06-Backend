@@ -2,223 +2,149 @@
   {
     "file": "article_4.pdf",
     "classification": {
-      "classification": "Guidelines on prostate cancer early detection and management",
+      "classification": "Prostate Cancer Early Detection Studies",
       "keywords": [
         "prostate cancer",
         "early detection",
         "biopsy",
-        "prostatic intraepithelial neoplasia",
-        "adenocarcinoma",
-        "androgen receptor inhibitors",
-        "extended biopsy sampling",
-        "prostate-specific antigen",
-        "treatment efficacy",
-        "biopsy protocols",
-        "follow-up intervals",
-        "prostate needle biopsies"
+        "intraepithelial neoplasia",
+        "diagnostic criteria",
+        "follow-up",
+        "risk factors"
       ],
-      "reason": "This document comprises excerpts from the National Comprehensive Cancer Network (NCCN) guidelines on prostate cancer early detection. It provides a detailed compilation of research and evidence related to prostate cancer diagnosis, management, and follow-up strategies. The guidelines address various aspects, including biopsy techniques, the significance of prostatic intraepithelial neoplasia (PIN), follow-up intervals, and treatment considerations based on biopsy results. The inclusion of research and recommendations relating to biopsy protocols, extended sampling, and the interpretation of pathology reports makes this document highly relevant to prostate cancer research, clinical practice, and the development of improved diagnostic and treatment approaches."
+      "reason": "The document contains a collection of studies and references related to prostate cancer early detection, including biopsy practices, diagnostic criteria, and follow-up protocols. These are essential for understanding the current approaches and research in detecting prostate cancer at an early stage."
     }
   },
   {
     "file": "article_5.pdf",
     "classification": {
-      "classification": "Guidance and Recommendations for Prostate Cancer Management",
+      "classification": "Study on prostate cancer screening",
       "keywords": [
-        "prostate cancer",
+        "false-positive",
         "screening",
-        "diagnosis",
-        "management",
-        "active surveillance",
-        "treatment",
-        "guidelines",
-        "recommendations",
-        "5alpha-reductase inhibitors",
-        "lower urinary tract symptoms",
-        "benign prostatic hyperplasia",
-        "chronic bacterial prostatitis",
-        "prostatitis",
-        "NICE",
-        "Memorial Sloan Kettering Cancer Center"
+        "prostate cancer"
       ],
-      "reason": "This document provides comprehensive guidance and recommendations for prostate cancer management, covering aspects from screening and diagnosis to treatment strategies like active surveillance and addressing related conditions such as lower urinary tract symptoms and prostatitis. It references multiple guidelines and institutions (NICE, Memorial Sloan Kettering), making it a valuable resource for healthcare professionals and researchers involved in prostate cancer care. The inclusion of information on 5alpha-reductase inhibitors and their impact on prostate cancer diagnosis and progression further strengthens its relevance to the field."
+      "reason": "The document discusses the challenges of false-positive results in population-based prostate cancer screening, which is crucial for understanding and improving screening accuracy."
     }
   },
   {
     "file": "article_7.pdf",
     "classification": {
-      "classification": "Guidelines and recommendations for prostate cancer screening",
+      "classification": "Prostate Cancer Screening Guidelines",
       "keywords": [
-        "prostate cancer",
-        "screening",
-        "PSA",
+        "prostate-specific antigen",
+        "screening guidelines",
         "digital rectal exam",
-        "age",
-        "risk assessment",
-        "guidelines",
-        "recommendations",
-        "African-American men",
-        "family history",
-        "comorbidity",
+        "PSA testing",
         "life expectancy",
-        "androgen receptor inhibitors",
-        "treatment"
+        "over-detection",
+        "racial disparities"
       ],
-      "reason": "This document is a compilation of guidelines and recommendations from various medical organizations regarding prostate cancer screening protocols. It covers topics such as age-based screening, the use of PSA and DRE, considerations for high-risk populations (e.g., African-American men, those with family history), and adjustments based on patient health and life expectancy. The information is crucial for informing clinical decision-making and optimizing screening strategies for prostate cancer, making it essential for prostate cancer research focused on prevention, early detection, and patient management."
+      "reason": "The document provides comprehensive screening recommendations for prostate cancer, including considerations for different populations and thresholds for PSA testing, which is crucial for research in early detection and management strategies."
     }
   },
   {
     "file": "article_6.pdf",
     "classification": {
-      "classification": "Guideline development & Committee Membership Opportunity",
+      "classification": "Prostate Cancer Research Journal Issue",
       "keywords": [
         "prostate cancer",
-        "guideline",
-        "committee",
-        "Canadian Medical Association",
-        "CMA",
-        "physician involvement",
-        "consensus",
-        "clinical practice",
-        "research",
-        "recommendations"
+        "early detection",
+        "diagnosis",
+        "practice guidelines"
       ],
-      "reason": "This document is a call for physician involvement in the Canadian Medical Association's (CMA) process of developing guidelines and recommendations related to medical practice. While not a direct research study, it's crucial for understanding the infrastructure and process through which evidence-based recommendations for prostate cancer management and related research directions are formulated and disseminated within Canada. Physician participation ensures that guidelines are informed by clinical expertise and relevant research, impacting the standard of care and potential avenues for future investigation. Understanding the governance and membership opportunities within the CMA provides context for how research findings are translated into practical guidelines for clinicians."
+      "reason": "The document presents an issue of a medical journal focusing on prostate cancer research, including articles on early detection and diagnosis. It is directly relevant to prostate cancer research as it contains peer-reviewed studies and practice guidelines."
     }
   },
   {
     "file": "article_2.pdf",
     "classification": {
-      "classification": "Review/Guideline on Prostate Cancer Early Detection & Screening",
+      "classification": "Comprehensive review on prostate cancer detection and management",
       "keywords": [
         "prostate cancer",
         "early detection",
-        "screening",
-        "risk stratification",
-        "PSA testing",
-        "magnetic resonance imaging",
+        "risk thresholds",
         "artificial intelligence",
-        "European guidelines",
-        "organized screening programs",
-        "EPAD",
-        "iPAAC",
-        "Europe's Beating Cancer Plan"
+        " Gleason score",
+        "metastatic castration-resistant prostate cancer (mCRPC)",
+        "screening intervals",
+        "collaborative research",
+        "European initiatives",
+        "patient information"
       ],
-      "reason": "This document is a review and outlines a European model for an organized, risk-stratified early detection program for prostate cancer. It covers key aspects of current practice, including PSA testing, MRI, AI applications, and guideline development. The inclusion of various European initiatives (EPAD, iPAAC, Europe's Beating Cancer Plan) highlights its relevance to ongoing efforts to improve prostate cancer outcomes across Europe. The comprehensive nature of the review, encompassing various aspects of early detection and screening strategies, justifies its inclusion in prostate cancer research. The document synthesizes current knowledge and recommendations, which is invaluable for researchers and clinicians involved in prostate cancer prevention and diagnosis."
+      "reason": "The document provides a comprehensive overview of various aspects of prostate cancer detection, management, and collaborative efforts. It includes insights into diagnostic methods, treatment considerations, and public health strategies, making it highly relevant for prostate cancer research."
     }
   },
   {
     "file": "article_3.pdf",
     "classification": {
-      "classification": "Guidance on prostate cancer screening and diagnosis",
+      "classification": "PSA Testing Guidelines for Prostate Cancer Detection",
       "keywords": [
         "prostate cancer",
         "PSA testing",
-        "screening",
-        "diagnosis",
+        "screening guidelines",
         "metastatic prostate cancer",
-        "age-related screening",
-        "baseline PSA",
-        "overdiagnosis",
-        "active surveillance",
-        "Melbourne Consensus Statement",
-        "risk prediction",
-        "age 50-69",
-        "age 40-55"
+        "evidence-based"
       ],
-      "reason": "The document provides a consensus statement and guidance on prostate cancer screening and diagnosis, particularly regarding the role of PSA testing and risk prediction. It addresses crucial aspects of prostate cancer management, including the balance between early detection and the potential for overtreatment, and emphasizes personalized screening approaches based on age and risk factors. The Melbourne Consensus Statement directly influences clinical practice and research in prostate cancer, outlining recommendations for screening strategies and emphasizing the importance of decoupling diagnosis from intervention. Its discussion of overtreatment, active surveillance, and personalized screening makes it valuable for understanding current debates and best practices in the field."
+      "reason": "The document presents a detailed consensus statement on the use of PSA testing in prostate cancer detection and management. It provides Level 1 evidence supporting the role of PSA testing in reducing metastatic disease and mortality rates, emphasizes the importance of multivariable approaches to diagnosis, and addresses key considerations for different age groups and life expectancies. This makes it highly relevant to prostate cancer research and clinical practice."
     }
   },
   {
     "file": "article_11.pdf",
     "classification": {
-      "classification": "Assessment of prostate cancer screening and biomarkers",
+      "classification": "Study on biomarkers for prostate cancer detection",
       "keywords": [
-        "prostate cancer",
-        "screening",
-        "biomarkers",
-        "PSA",
-        "free PSA",
-        "p2PSA",
-        "PHI",
-        "risk-based screening",
-        "PSA velocity",
-        "kallikrein markers",
+        "prostate-specific antigen (PSA)",
+        "biomarker",
+        "prostate cancer detection",
         "family history",
-        "detection",
-        "early diagnosis",
-        "clinical performance",
-        "systematic review",
-        "meta-analysis"
+        "screening"
       ],
-      "reason": "This compilation of research articles focuses on refining prostate cancer screening methods and identifying novel biomarkers. It explores the utility of various PSA-based tests (free PSA, p2PSA, PHI), assesses the effectiveness of risk-based screening strategies, evaluates PSA velocity and other markers for improved early detection, and examines the applicability of these approaches in men with family history. This addresses crucial aspects of prostate cancer research aiming for more effective and targeted screening programs."
+      "reason": "The document evaluates the performance of serum prostate-specific antigen isoform [-2]proPSA and the Prostate Health Index (PHI) in detecting prostate cancer, particularly in men with a family history. This is directly relevant to prostate cancer research as it improves screening strategies for high-risk individuals."
     }
   },
   {
     "file": "article_10.pdf",
     "classification": {
-      "classification": "Review of Prostate Cancer Screening and Risk Assessment",
+      "classification": "Prostate Cancer Risk Factors and Natural History",
       "keywords": [
         "prostate cancer",
-        "screening",
-        "risk assessment",
-        "PSA",
-        "risk calculators",
-        "comorbidity",
-        "survival",
-        "incidence",
-        "natural history",
-        "HOXB13",
-        "androgen receptor inhibitors",
-        "risk-based strategy",
-        "early detection",
-        "life expectancy"
+        "risk factors",
+        "genetic variants",
+        "HOXB13 mutations",
+        "early diagnosis"
       ],
-      "reason": "This document is a comprehensive review of prostate cancer screening strategies, risk assessment tools, and their impact on patient outcomes. It covers a wide range of topics including the efficacy of PSA-based screening, the use of risk calculators to personalize screening approaches, the influence of comorbidity and age on survival, and the natural history of early-stage prostate cancer. It also discusses genetic factors like HOXB13 and androgen receptor inhibitors. The review's discussion of the benefits, limitations, and evolving landscape of prostate cancer screening makes it highly valuable for researchers and clinicians in the field, providing insight into best practices and future directions for improved patient care and research."
+      "reason": "This document compiles studies on various aspects of prostate cancer, including genetic risk factors (e.g., HOXB13 mutations), the natural history of localized prostate cancer, and the impact of age at diagnosis and comorbidities on treatment outcomes. These topics are critical for understanding prostate cancer epidemiology, genetics, and clinical management."
     }
   },
   {
     "file": "article_0.pdf",
     "classification": {
-      "classification": "Decision support and modeling in prostate cancer management",
+      "classification": "Prostate cancer prediction model using machine learning",
       "keywords": [
-        "prostate cancer",
-        "nomogram",
-        "risk assessment",
-        "clinical markers",
-        "survival analysis",
-        "optimization",
-        "fuzzy logic",
-        "neuro-fuzzy",
-        "decision making",
-        "cost analysis",
-        "screening",
-        "recurrence",
-        "staging",
-        "prognostic models"
+        "biochemical recurrence",
+        "support vector machines",
+        "machine learning",
+        "prognostic decision making"
       ],
-      "reason": "This compilation of references highlights a wide range of quantitative and modeling approaches applied to prostate cancer research and clinical practice. It includes studies utilizing nomograms for predicting outcomes, clinical markers for recurrence, optimization techniques for risk grouping, and fuzzy/neuro-fuzzy systems for decision support. The focus on survival analysis, staging, screening, and cost-effectiveness demonstrates its relevance to improving diagnosis, treatment planning, and patient management across various stages of prostate cancer. The inclusion of cost analyses and screening studies directly address the economic and public health aspects of prostate cancer care, further justifying its relevance."
+      "reason": "The document presents a study that evaluates the use of support vector machines (SVM) for predicting biochemical recurrence in prostate cancer patients, which is directly relevant to advancing predictive models and prognostic strategies in prostate cancer research."
     }
   },
   {
     "file": "article_9.pdf",
     "classification": {
-      "classification": "Guidelines for PSA testing and management",
+      "classification": "Prostate Cancer Screening Guidelines",
       "keywords": [
-        "PSA",
         "prostate cancer",
+        "PSA testing",
         "screening",
-        "DRE",
-        "referral thresholds",
+        "risk factors",
+        "digital rectal examination",
+        "biopsy referral threshold",
         "life expectancy",
-        "risk assessment",
-        "management guidelines",
-        "PCRMP",
-        "baseline PSA",
-        "rising PSA",
-        "age-specific median value"
+        "repeat PSA test"
       ],
-      "reason": "This document provides detailed guidelines and recommendations for Prostate-Specific Antigen (PSA) testing and management in asymptomatic men. It covers topics such as age-appropriate testing, referral criteria based on PSA levels, considerations for men with limited life expectancy, the importance of digital rectal examination (DRE), and the rationale behind not implementing a population-wide screening program. The guidelines offer a practical framework for healthcare providers and contribute significantly to understanding the nuances of PSA testing and its role in prostate cancer detection and management. The specific thresholds and recommendations provided are crucial for research evaluating the effectiveness of different testing strategies and improving patient outcomes."
+      "reason": "The document provides evidence-based guidelines and recommendations for prostate cancer screening, including details on PSA testing thresholds, the role of DRE, and considerations for asymptomatic men. These guidelines are essential for understanding current practices in prostate cancer detection and management."
     }
   }
 ]
