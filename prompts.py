@@ -73,3 +73,19 @@ Format your response with:
 - Refined query
 - Key concepts identified
 - Refinement reasoning"""
+
+
+# New prompt for keyword expansion
+keyword_expansion_template = """You are an academic search assistant that helps users formulate effective search queries.
+Given a simple keyword or short phrase, expand it into a well-formulated search query that would retrieve relevant academic papers.
+
+Keyword: {keyword}
+
+Instructions:
+1. Transform this keyword into a complete, natural language search query
+2. Include relevant terminology and concepts related to the keyword
+3. Make sure the expanded query is clear, specific, and academically oriented
+4. Keep the tone scholarly and the language precise
+5. The result should be 1-2 sentences max, focused on the core concept
+
+Your expanded query:"""

@@ -9,6 +9,9 @@ from django.conf import settings
 from django.http import JsonResponse
 from django.db.models import Q
 from asgiref.sync import sync_to_async
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
+from django.core.cache import cache
 
 from pydantic import BaseModel, Field
 from typing import List
@@ -19,7 +22,7 @@ from langchain_ollama import ChatOllama, OllamaEmbeddings
 from .models import Article, JSONData, EvaluationArticle
 from .utils import reset_sequence
 
-from prompts import zero_template, one_template, few_template
+from prompts import zero_template, one_template, few_template, keyword_expansion_template
 
 
 
@@ -32,6 +35,14 @@ class ResearchQuery(BaseModel):
 
 class ResearchOutput(BaseModel):
     result: ResearchQuery
+
+
+class ExpandedQuery(BaseModel):
+    expanded_query: str = Field(..., description="Expanded search query created from the keyword")
+
+
+class QueryExpansionResult(BaseModel):
+    result: ExpandedQuery
 
 
 def store_json_from_file(request):
@@ -233,11 +244,40 @@ async def refine_query_with_ollama(topic):
     return task.result().model_dump()
 
 
-async def search_articles_vector_async(request):
-    # Get query from request or use default
-    user_query = request.GET.get('query', 'prostate cancer screening guidelines')
+async def expand_keyword_with_ollama(keyword):
+    """
+    Use Ollama LLM to expand a keyword into a full search query
+    """
+    prompt = ChatPromptTemplate.from_template(keyword_expansion_template)
     
-    # Refine the query using Ollama
+    model = ChatOllama(**{'model': 'deepseek-r1:1.5b', 'temperature': 0.2, 'seed': 42})
+    structured_llm = model.with_structured_output(QueryExpansionResult, method="json_schema")
+    
+    chain = prompt | structured_llm
+    
+    task = asyncio.create_task(chain.ainvoke({"keyword": keyword}))
+    
+    try:
+        # Shorter timeout for this simpler task
+        await asyncio.wait_for(task, 30.0)
+    except asyncio.TimeoutError:
+        return None
+    
+    return task.result().model_dump()
+
+
+async def search_articles_vector_async(request):
+    if request.method == 'GET':
+        user_query = request.GET.get('query', 'prostate cancer screening guidelines')
+    elif request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            user_query = data.get('message', '')
+        except json.JSONDecodeError:
+            return JsonResponse({'error': 'Invalid JSON'}, status=400)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+    
     refinement_result = await refine_query_with_ollama(user_query)
     
     if not refinement_result:
@@ -280,7 +320,7 @@ async def search_articles_vector_async(request):
             'research_paper_type': article.research_paper_type,
             'country_organisation': article.country_organisation,
             'url': article.url,
-            'similarity_score': float(score),  # Convert numpy float to Python float for JSON serialization
+            'similarity_score': float(score),
             'abstract_preview': article.abstract[:200] + '...' if len(article.abstract) > 200 else article.abstract
         })
     
@@ -292,7 +332,7 @@ async def search_articles_vector_async(request):
         'articles': results
     })
 
-
+@csrf_exempt
 def search_articles_vector(request):
     """Synchronous wrapper for the async vector search function."""
     return asyncio.run(search_articles_vector_async(request))
@@ -301,3 +341,62 @@ def search_articles_vector(request):
 def trigger_embeddings_generation(request):
     """Endpoint to trigger the embedding generation process."""
     return asyncio.run(generate_embeddings_for_all_articles(request))
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def expand_keyword(request):
+    try:
+        # Parse the request body
+        data = json.loads(request.body)
+        keyword = data.get('keyword', '')
+        
+        if not keyword:
+            return JsonResponse({
+                'success': False,
+                'error': 'No keyword provided'
+            }, status=400)
+        
+        # Check cache first
+        cache_key = f'expanded_keyword:{keyword.lower().strip()}'
+        cached_result = cache.get(cache_key)
+        
+        if cached_result:
+            return JsonResponse({
+                'success': True,
+                'originalKeyword': keyword,
+                'expandedQuery': cached_result
+            })
+        
+        # If not in cache, use the LLM to expand
+        expansion_result = asyncio.run(expand_keyword_with_ollama(keyword))
+        
+        if not expansion_result:
+            return JsonResponse({
+                'success': False,
+                'error': 'Query expansion timed out'
+            }, status=504)
+        
+        # Extract the expanded query from the result
+        expanded_query = expansion_result['result']['expanded_query']
+        
+        # Cache the result for future use (1 day)
+        cache.set(cache_key, expanded_query, 86400)
+        
+        # Return the expanded query
+        return JsonResponse({
+            'success': True,
+            'originalKeyword': keyword,
+            'expandedQuery': expanded_query
+        })
+        
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'success': False,
+            'error': 'Invalid JSON in request body'
+        }, status=400)
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': f'Error expanding keyword: {str(e)}'
+        }, status=500)
