@@ -22,7 +22,7 @@ from langchain_ollama import ChatOllama, OllamaEmbeddings
 from .models import Article, JSONData, EvaluationArticle
 from .utils import reset_sequence
 
-from prompts import zero_template, one_template, few_template, keyword_expansion_template
+from prompts import zero_template, one_template, few_template, keyword_expansion_template, keyword_generation_template
 
 
 
@@ -43,6 +43,13 @@ class ExpandedQuery(BaseModel):
 
 class QueryExpansionResult(BaseModel):
     result: ExpandedQuery
+
+
+class KeywordResults(BaseModel):
+    keywords: List[str] = Field(..., description="List of relevant keywords extracted from the query")
+
+class KeywordOutput(BaseModel):
+    result: KeywordResults
 
 
 def store_json_from_file(request):
@@ -266,6 +273,28 @@ async def expand_keyword_with_ollama(keyword):
     return task.result().model_dump()
 
 
+async def generate_keywords_with_ollama(query):
+    """
+    Use Ollama LLM to generate keywords from a user query
+    """
+    prompt = ChatPromptTemplate.from_template(keyword_generation_template)
+    
+    model = ChatOllama(**{'model': 'deepseek-r1:1.5b', 'temperature': 0.1, 'seed': 42})
+    structured_llm = model.with_structured_output(KeywordOutput, method="json_schema")
+    
+    chain = prompt | structured_llm
+    
+    task = asyncio.create_task(chain.ainvoke({"query": query}))
+    
+    try:
+        # Set timeout for the task
+        await asyncio.wait_for(task, 30.0)
+    except asyncio.TimeoutError:
+        return None
+    
+    return task.result().model_dump()
+
+
 async def search_articles_vector_async(request):
     if request.method == 'GET':
         user_query = request.GET.get('query', 'prostate cancer screening guidelines')
@@ -332,6 +361,7 @@ async def search_articles_vector_async(request):
         'articles': results
     })
 
+
 @csrf_exempt
 def search_articles_vector(request):
     """Synchronous wrapper for the async vector search function."""
@@ -341,6 +371,11 @@ def search_articles_vector(request):
 def trigger_embeddings_generation(request):
     """Endpoint to trigger the embedding generation process."""
     return asyncio.run(generate_embeddings_for_all_articles(request))
+
+@csrf_exempt
+def generate_keywords_view(request):
+    """Synchronous wrapper for the async keyword generation function."""
+    return asyncio.run(generate_keywords(request))
 
 
 @csrf_exempt
@@ -399,4 +434,62 @@ def expand_keyword(request):
         return JsonResponse({
             'success': False,
             'error': f'Error expanding keyword: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@require_http_methods(["GET", "POST"])
+async def generate_keywords(request):
+    """
+    Generate key concepts/keywords based on the user's initial query
+    """
+    if request.method == 'GET':
+        user_query = request.GET.get('query', '')
+    elif request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            user_query = data.get('query', '')
+        except json.JSONDecodeError:
+            return JsonResponse({'error': 'Invalid JSON'}, status=400)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+    
+    if not user_query:
+        return JsonResponse({'error': 'No query provided'}, status=400)
+    
+    # Check cache first for faster responses
+    cache_key = f'keywords:{user_query.lower().strip()}'
+    cached_result = cache.get(cache_key)
+    
+    if cached_result:
+        return JsonResponse({
+            'success': True,
+            'query': user_query,
+            'keywords': cached_result
+        })
+    
+    # If not in cache, use the LLM to generate keywords
+    try:
+        # FIXED: Use the correct function
+        keyword_result = await generate_keywords_with_ollama(user_query)
+        
+        if not keyword_result:
+            return JsonResponse({
+                'error': 'Keyword generation timed out'
+            }, status=504)
+        
+        # FIXED: Extract keywords from the correct result structure
+        keywords = keyword_result['result']['keywords']
+        
+        # Cache the result for future use (1 day)
+        cache.set(cache_key, keywords, 86400)
+        
+        return JsonResponse({
+            'success': True,
+            'query': user_query,
+            'keywords': keywords
+        })
+    except Exception as e:
+        return JsonResponse({
+            'error': f'Error generating keywords: {str(e)}'
         }, status=500)
