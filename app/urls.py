@@ -8,4 +8,5 @@ urlpatterns = [
     path('api/vector-search/', views.search_articles_vector, name='api_vector_search'),   
     path('api/expand-keyword/', views.expand_keyword, name='expand_keyword'),
     path('api/generate-keywords/', views.generate_keywords_view, name='generate-keywords'),
+    path('api/exclusion/analyze/', views.analyze_exclusion, name='analyze_exclusion'),
 ]

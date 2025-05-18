@@ -20,10 +20,19 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 
 from .models import Article, JSONData, EvaluationArticle
-from .utils import reset_sequence
+from .utils import reset_sequence, extract_text_from_document
 
 from prompts import zero_template, one_template, few_template, keyword_expansion_template, keyword_generation_template
 
+
+class ExclusionAnalysis(BaseModel):
+    classification: str
+    keywords: List[str]
+    reason: str
+
+
+class ExclusionAnalysisOutput(BaseModel):
+    result: ExclusionAnalysis
 
 
 class ResearchQuery(BaseModel):
@@ -295,6 +304,161 @@ async def generate_keywords_with_ollama(query):
     return task.result().model_dump()
 
 
+async def analyze_document_with_ollama(criteria: dict, document_text: str) -> dict:
+    """
+    Use Ollama LLM to analyze a document against exclusion criteria
+    """
+    # Debug: Print document text info
+    print(f"[DEBUG] Document text length: {len(document_text)} characters")
+    print(f"[DEBUG] Document text preview (first 200 chars): {document_text[:200]}")
+    
+    # Debug: Check if document text is empty or very short
+    if len(document_text) < 50:
+        print(f"[ERROR] Document text is suspiciously short: {document_text}")
+    
+    # Debug: Print criteria
+    print(f"[DEBUG] Criteria received: {criteria}")
+    
+    # Trim document text if too long
+    max_text_length = 4000  
+    trimmed_text = document_text[:max_text_length] + ("..." if len(document_text) > max_text_length else "")
+    
+    print(f"[DEBUG] Trimmed text length: {len(trimmed_text)} characters")
+    print(f"[DEBUG] Trimmed text preview (first 100 chars): {trimmed_text[:100]}")
+    print(f"[DEBUG] Trimmed text preview (last 100 chars): {trimmed_text[-100:] if len(trimmed_text) > 100 else trimmed_text}")
+    
+    prompt_text = """
+    ## Prompt Description
+    You are reviewing a medical document about prostate cancer that has been classified for **EXCLUSION**.
+
+    ---
+
+    ## Document Text
+    ```text
+    {text}
+    ````
+
+    ---
+
+    ## Input Data
+    ## Exclusion Reason
+
+    ```json
+    {criteria_json}
+    ```
+
+    ---
+
+    ## Task Instructions
+    1. Interpret what the **exclusion reason** likely means in context
+    2. Read through the document carefully and explain **why** it meets the reason for exclusion
+    3. IMPORTANT: Extract AT LEAST 3-5 specific words or phrases DIRECTLY FROM THE DOCUMENT TEXT that justify the exclusion. If it's a non-English document, extract some foreign words or phrases from the text as evidence.
+
+    ---
+
+    ## Response Format
+    ```json
+    {{
+    "classification": "The given exclusion reason",
+    "keywords": ["exact", "words", "or", "phrases", "from", "the", "document", "that", "justify", "exclusion"],
+    "reason": "A detailed explanation of why this document should be excluded based on the given reason"
+    }}
+    ```
+
+    ---
+
+    ## Example 1
+    **Exclusion reason:**
+    ```
+    "Non-English"
+    ```
+
+    **Document text:**
+    ```
+    "Ce document traite des approches nutritionnelles dans le traitement du cancer de la prostate avancé chez les patients âgés."
+    ```
+
+    **Expected output:**
+    ```json
+    {{
+    "classification": "Non-English",
+    "keywords": ["Ce document", "approches nutritionnelles", "traitement", "cancer de la prostate", "patients âgés"],
+    "reason": "The document is written in French, which does not meet the English language requirement for inclusion."
+    }}
+    ```
+
+    ---
+
+    ## Final Note
+    Return **only** the JSON with **no additional text**.
+    """
+
+    # Create prompt template with the appropriate variables
+    prompt = ChatPromptTemplate.from_template(prompt_text)
+    
+    # Convert criteria dict to JSON string
+    criteria_json = json.dumps(criteria, indent=2)
+    
+    # Debug: Print prompt variables
+    print(f"[DEBUG] criteria_json: {criteria_json[:100]}...")
+    
+    model = ChatOllama(**{'model': 'gemma:7b', 'temperature': 0.2, 'seed': 42})
+    
+    # Debug: Print model info
+    print(f"[DEBUG] Using model: {model.model}")
+    
+    # Set up structured output using the ExclusionAnalysisOutput Pydantic model
+    structured_llm = model.with_structured_output(ExclusionAnalysisOutput, method="json_schema")
+    
+    # Create a chain
+    chain = prompt | structured_llm
+    
+    # Prepare the inputs
+    inputs = {
+        "text": trimmed_text, 
+        "criteria_json": criteria_json
+    }
+    
+    # Debug: Print final inputs
+    print(f"[DEBUG] Final input: text length={len(inputs['text'])}, criteria_json length={len(inputs['criteria_json'])}")
+    
+    # Invoke the chain asynchronously
+    print("[DEBUG] Starting model invocation...")
+    task = asyncio.create_task(chain.ainvoke(inputs))
+    
+    try:
+        # Set a timeout for the task
+        print("[DEBUG] Waiting for model response...")
+        await asyncio.wait_for(task, 60.0)
+        print("[DEBUG] Model response received!")
+    except asyncio.TimeoutError:
+        print("[ERROR] Model invocation timed out after 60 seconds")
+        return None
+    except Exception as e:
+        print(f"[ERROR] Exception in model invocation: {str(e)}")
+        return None
+    
+    # Get the result
+    result = task.result().model_dump()
+    
+    # Debug: Print the raw result
+    print(f"[DEBUG] Raw result from model: {result}")
+    
+    # Debug: Check keywords
+    if 'result' in result and 'keywords' in result['result']:
+        keywords = result['result']['keywords']
+        print(f"[DEBUG] Keywords extracted: {keywords}")
+        
+        # Check if keywords are actually from the document
+        for keyword in keywords:
+            if keyword.lower() in document_text.lower():
+                print(f"[DEBUG] Keyword '{keyword}' FOUND in document")
+            else:
+                print(f"[DEBUG] Keyword '{keyword}' NOT FOUND in document")
+    
+    return result
+
+
 async def search_articles_vector_async(request):
     if request.method == 'GET':
         user_query = request.GET.get('query', 'prostate cancer screening guidelines')
@@ -492,4 +656,81 @@ async def generate_keywords(request):
     except Exception as e:
         return JsonResponse({
             'error': f'Error generating keywords: {str(e)}'
+        }, status=500)
+    
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def analyze_exclusion(request):
+    try:
+        # Check if document was uploaded
+        if 'document' not in request.FILES:
+            return JsonResponse({
+                'success': False,
+                'error': 'No document uploaded'
+            }, status=400)
+        
+        document = request.FILES['document']
+        
+        # Get exclusion criteria from form data or JSON
+        exclusion_criteria = request.POST.get('criteria', '')
+        if not exclusion_criteria and request.content_type == 'application/json':
+            try:
+                body_data = json.loads(request.body)
+                exclusion_criteria = body_data.get('criteria', '')
+            except json.JSONDecodeError:
+                pass
+        
+        if not exclusion_criteria:
+            return JsonResponse({
+                'success': False,
+                'error': 'No exclusion criteria provided'
+            }, status=400)
+        
+        # Extract text from the document
+        document_text = extract_text_from_document(document)
+        if not document_text:
+            return JsonResponse({
+                'success': False,
+                'error': 'Could not extract text from document'
+            }, status=400)
+        
+        # *** DEBUG PRINTS ***
+        print(f"[analyze_exclusion] Exclusion criteria: {exclusion_criteria!r}")
+        print(f"[analyze_exclusion] Document text preview: {document_text[:500]!r}")
+        
+        # Generate a cache key based on criteria and document content hash
+        cache_key = f'exclusion_analysis:{hash(exclusion_criteria + document_text[:1000])}'
+        cached_result = cache.get(cache_key)
+        if cached_result:
+            return JsonResponse({
+                'success': True,
+                'documentName': document.name,
+                'result': cached_result
+            })
+        
+        # Analyze the document
+        analysis_result = asyncio.run(analyze_document_with_ollama(exclusion_criteria, document_text))
+        if not analysis_result:
+            return JsonResponse({
+                'success': False,
+                'error': 'Document analysis timed out'
+            }, status=504)
+        
+        # Extract the result
+        result = analysis_result['result']
+        
+        # Cache the result for future use (1 day)
+        cache.set(cache_key, result, 86400)
+        
+        return JsonResponse({
+            'success': True,
+            'documentName': document.name,
+            'result': result
+        })
+        
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': f'Error analyzing document exclusion: {str(e)}'
         }, status=500)
