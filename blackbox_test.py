@@ -7,7 +7,7 @@ from pprint import pprint
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 django.setup()
 
-# Now we can import Django modules
+# Import Django modules
 from app.views import (
     generate_keywords_with_ollama,
     refine_query_with_ollama,
@@ -24,19 +24,7 @@ def print_test_result(input_data, output_data):
     print("\nINPUT:")
     pprint(input_data, width=125)
     print("\nOUTPUT:")
-    if isinstance(output_data, dict):
-        if 'key_concepts' in output_data:
-            for key in ['query', 'refined_query', 'key_concepts', 'result_count', 'articles']:
-                if key == 'articles':
-                    print("articles:", end=" ")
-                    pprint(output_data['articles'], width=125)
-                pprint(f"{key}: {output_data[key]}", width=125)
-        else:
-            pprint(output_data, width=125)
-            # pprint(output_data)
-    else:
-        pprint(output_data, width=125)
-        # pprint(output_data)
+    pprint(output_data, width=125)
     print("\n" + "="*50)
     print("\n")
 
