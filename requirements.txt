@@ -9,3 +9,4 @@ nltk
 numpy
 langchain-ollama 
 python-docx
+PyPDF2

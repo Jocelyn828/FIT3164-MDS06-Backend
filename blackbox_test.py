@@ -2,6 +2,7 @@ import os
 import django
 import asyncio
 from pprint import pprint
+from django.core.files.uploadedfile import SimpleUploadedFile
 
 # Set up Django environment BEFORE importing any Django modules
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
@@ -14,6 +15,8 @@ from app.views import (
     expand_keyword_with_ollama,
     search_articles_vector_async
 )
+
+from app.utils import extract_text_from_document
 
 def print_test_header(function_name):
     print("\n" + "="*50)
@@ -52,12 +55,20 @@ async def test_vector_search():
     output = await search_articles_vector_async(input_query)
     print_test_result(input_query, output)
 
+def test_extract_text_from_document():
+    print_test_header("EXTRACT TEXT FROM DOCUMENT")
+    text_content = "This is a test text file.\nIt has multiple lines.\nTesting text extraction."
+    text_file = SimpleUploadedFile("test.txt", text_content.encode('utf-8'))
+    output = extract_text_from_document(text_file)
+    print_test_result("Text file", output)
+
 if __name__ == "__main__":
     # run the test individually
     # asyncio.run(test_generate_keywords())
     # asyncio.run(test_refine_query())
-    asyncio.run(test_expand_keyword())
+    # asyncio.run(test_expand_keyword())
     # asyncio.run(test_vector_search())
+    test_extract_text_from_document()
     
     # # Run all tests
     # async def run_all_tests():
