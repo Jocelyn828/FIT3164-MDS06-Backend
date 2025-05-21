@@ -108,24 +108,117 @@ Your expanded query:"""
 
 
 # New prompt for query refinement
-combined_query_template = """
-You are a research query refinement assistant. 
-Given a search query that includes boolean operators (AND/OR), 
-create a more effective search query for finding academic articles.
+refine_query_template = """
+## Prompt Description
+You are an expert assistant helping to refine and optimize a verbose or messy search query for use in **semantic document retrieval** using embedding-based models (e.g., SBERT, OpenAI, Cohere).
 
-Combined Query: {combined_query}
+---
 
-Please provide:
-1. A refined search query that will be more effective for finding relevant articles
-2. The key concepts identified in the query
-3. Your reasoning for how you refined the query
+## Initial Query
+```text
+{text}
+````
 
-Format your response as a JSON object with the following structure:
-{
-    "refined_query": "your refined query",
-    "key_concepts": ["concept1", "concept2", "..."],
-    "refinement_reason": "explanation of your refinement approach"
-}
+---
+
+## Task Instructions
+
+1. Carefully read and understand the initial query to identify the **main topic**, **supporting details**, and the **underlying information need**.
+2. Rephrase the query into a **natural, focused, and concise sentence** that best represents the user's intent for document retrieval — avoid Boolean logic or keywords unless they clarify meaning.
+3. Extract 4–8 **key concepts or phrases** from the original query that are central to the search intent. These should be semantically meaningful terms, not formatting instructions or metadata.
+4. Write a brief explanation describing:
+
+   * What the original query was about
+   * How the refined version improves clarity for semantic understanding
+   * Any generalizations or assumptions made (e.g., excluding non-English based on examples)
+
+---
+
+## Response Format
+
+```json
+{{
+  "Initial query": "The original verbose or unstructured input query",
+  "Refined Query": "A clean, focused semantic search query in natural language",
+  "key concepts": ["important", "topics", "and", "phrases", "from", "the", "query"],
+  "reason": "Explanation of what the user was looking for and how the new query expresses that more clearly for an embedding-based system."
+}}
+```
+
+---
+
+## Example 1
+
+**Initial query:**
+
+```
+("prostate-specific antigen" OR PSA OR "screening guidelines" OR "risk factors" OR "genetic variants" OR "machine learning" OR "support vector machines") 
+NOT ("Chinese" OR "French" OR "general AI applications" OR "unrelated medical field")
+```
+
+**Expected output:**
+
+```json
+{{
+  "Initial query": "('prostate-specific antigen' OR PSA OR ...)",
+  "Refined Query": "Studies using machine learning models like SVMs to analyze PSA levels or genetic risk factors for prostate cancer screening, focused on English-language publications.",
+  "key concepts": ["prostate-specific antigen", "PSA", "machine learning", "support vector machines", "genetic risk factors", "prostate cancer screening", "English-language filter"],
+  "reason": "The original query aimed to find research on machine learning approaches to PSA and genetic factors in prostate cancer screening, while excluding irrelevant topics and non-English documents. The refined query summarizes that intent naturally and is better suited for embedding-based search."
+}}
+```
+
+---
+
+## Final Note
+
+Return **only** the JSON with **no extra explanation or comments**.
+"""
+
+boolean_refine_query_template = """
+## Prompt Description
+You are an expert assistant helping to refine and optimize a verbose or messy search query for use in **semantic document retrieval** using **embedding-based models**. The goal is to clean up the query, group concepts using Boolean logic (AND, OR, NOT) for clarity, and extract key ideas — while keeping the query semantically understandable as natural language.
+
+---
+
+## Initial Query
+```text
+{text}
+````
+
+---
+
+## Task Instructions
+
+1. Carefully read and understand the initial query to identify the **main topic**, **supporting details**, and the **underlying information need**.
+2. Reconstruct the query using Boolean operators (`AND`, `OR`, `NOT`) to logically organize ideas and improve retrieval precision and clarity.
+3. Extract 4–8 **key concepts or phrases** that are central to the query’s intent. These should be meaningful terms that reflect the user's search goals.
+4. Generalize any field-based or literal exclusions (e.g., `title:`, `author:`, direct document titles). Instead of copying such syntax, abstract their **semantic meaning**.
+
+   * For example, if a user excludes a specific article by title, infer what **topic or theme** that article represents (e.g., "epidemiology", "historical guidelines") and exclude it at a conceptual level.
+5. Write a short explanation describing:
+
+   * What the query is about
+   * How the refined version improves semantic clarity
+   * Any exclusions or generalizations applied
+
+---
+
+## Response Format
+
+```json
+{{
+  "Initial query": "The original unstructured input query",
+  "Refined query": "A Boolean-style, semantically structured query suitable for academic or embedding-based search",
+  "Key concepts": ["concept 1", "concept 2", "concept 3"],
+  "Reason": "A concise explanation of how the refined query captures the core intent, improves clarity, and organizes key ideas using Boolean logic — avoiding literal field-based syntax where possible."
+}}
+```
+
+---
+
+## Final Note
+
+Return **only** the JSON output. Do not include markdown, extra commentary, or raw field-level metadata such as `title:` or citation strings.
 """
 
 
@@ -134,7 +227,7 @@ You are an AI assistant specializing in medical research and information retriev
 
 For the query: "{query}"
 
-Extract 8-12 distinct keywords or key phrases that:
+Extract 6-8 distinct keywords or key phrases that:
 1. Capture the essential medical or research concepts in the query
 2. Include specific technical terms, conditions, treatments, or methodologies
 3. Represent different aspects or dimensions of the query (diagnosis, treatment, etiology, epidemiology, etc.)

@@ -4,6 +4,7 @@ import datetime
 import asyncio
 
 import numpy as np
+import re
 
 from django.conf import settings
 from django.http import JsonResponse
@@ -22,7 +23,7 @@ from langchain_ollama import ChatOllama, OllamaEmbeddings
 from .models import Article, JSONData, EvaluationArticle
 from .utils import reset_sequence, extract_text_from_document
 
-from prompts import zero_template, one_template, few_template, keyword_expansion_template, keyword_generation_template
+from prompts import zero_template, boolean_refine_query_template, keyword_expansion_template, keyword_generation_template
 
 
 class ExclusionAnalysis(BaseModel):
@@ -243,14 +244,14 @@ async def generate_embeddings_for_all_articles(request):
 
 
 async def refine_query_with_ollama(topic):
-    prompt = ChatPromptTemplate.from_template(zero_template)
+    prompt = ChatPromptTemplate.from_template(boolean_refine_query_template)
     
     model = ChatOllama(**{'model': 'deepseek-r1:1.5b', 'temperature': 0.2, 'seed': 42})
     structured_llm = model.with_structured_output(ResearchOutput, method="json_schema")
     
     chain = prompt | structured_llm
     
-    task = asyncio.create_task(chain.ainvoke({"topic": topic}))
+    task = asyncio.create_task(chain.ainvoke({"text": topic}))
     
     try:
         await asyncio.wait_for(task, 60.0)
@@ -490,9 +491,23 @@ async def search_articles_vector_async(request):
         EvaluationArticle.objects.filter(embedding_status='completed')
     )
     
+    # Check if 'title' appears in the query
+    has_title_in_query = 'title' in user_query.lower()
+    
+    # If 'title' is in the query, extract the titles to exclude
+    exclude_articles = []
+    if has_title_in_query:
+        exclude_articles = re.findall(r'title:\s*"([^"]+)"', user_query)
+
     # Calculate similarity scores for each article
     scored_articles = []
     for article in articles:
+
+        # Exclude if the article is in the exclude list            
+        if has_title_in_query and article.title:
+            if article.title in exclude_articles:
+                continue
+            
         if article.embedding:
             # Calculate cosine similarity between query and article embeddings
             similarity_score = cosine_similarity(query_embedding, article.embedding)
