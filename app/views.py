@@ -61,6 +61,17 @@ class KeywordResults(BaseModel):
 class KeywordOutput(BaseModel):
     result: KeywordResults
 
+def validate_query(query):
+    if not query or not query.strip():
+        return False, "Query cannot be empty"
+    
+    # Count words
+    word_count = len([word for word in query.split() if word.strip()])
+    
+    if word_count > 500:  # Maximum 50 words
+        return False, "Query is too long. Maximum 500 words allowed."
+    
+    return True, ""
 
 def store_json_from_file(request):
     # Get the path to the JSON file in the project root
@@ -633,8 +644,12 @@ async def generate_keywords(request):
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)
     
-    if not user_query:
-        return JsonResponse({'error': 'No query provided'}, status=400)
+    # Validate query
+    is_valid, error_message = validate_query(user_query)
+    if not is_valid:
+        return JsonResponse({
+            'error': error_message
+        }, status=400)
     
     # Check cache first for faster responses
     cache_key = f'keywords:{user_query.lower().strip()}'
